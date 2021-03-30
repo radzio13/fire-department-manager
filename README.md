@@ -44,3 +44,6 @@ help:                   Show this help.
   root
 * **Password**
   root
+
+## Documents
+All of the documents can be found in the [docs](docs) directory

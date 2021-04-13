@@ -1,9 +1,9 @@
-from django.shortcuts import render
-from django.views.generic.edit import CreateView
-from django.views.generic.base import TemplateResponseMixin, View
+from django.views.generic import TemplateView
 
-class HomePage(TemplateResponseMixin, View):
+
+class HomeView(TemplateView):
     template_name = 'department/home.html'
 
-    def get(self, request):
-        return self.render_to_response({})
+
+class EquipmentView(TemplateView):
+    template_name = 'department/equipment.html'

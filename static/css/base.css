@@ -4,6 +4,10 @@
     --secondary-text: #fff;
 }
 
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -41,13 +45,13 @@ body {
 .container {
     display: flex;
     width: 100%;
-    max-width: 800px;
-    margin: 15px auto;
+    max-width: 1200px;
+    margin: 35px auto;
 }
 
 .menu--left {
     width: 200px;
-    margin-left: 15px;
+    margin-left: 25px;
 }
 
 .menu__container {
@@ -71,6 +75,9 @@ body {
 
 #content {
     width: 100%;
+    margin-left: 25px;
+    margin-right: 25px;
+    overflow: auto;
 }
 
 #content h1 {
@@ -116,4 +123,26 @@ body {
 
 .main-img {
     max-width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #696969;
+    color: var(--secondary-text);
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    max-width: 100px;
+}
+
+td {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }

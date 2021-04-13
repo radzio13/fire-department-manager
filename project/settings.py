@@ -39,12 +39,13 @@ DJANGO_INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'department.apps.DepartmentConfig'
 ]
 
 THIRD_INSTALLED_APPS = []
 
-LOCAL_INSTALLED_APPS = []
+LOCAL_INSTALLED_APPS = [
+    'department.apps.DepartmentConfig'
+]
 
 INSTALLED_APPS = DJANGO_INSTALLED_APPS + THIRD_INSTALLED_APPS + LOCAL_INSTALLED_APPS
 

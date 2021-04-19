@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Marka</th>
+      <th>Model</th>
+      <th>Typ</th>
+      <th>Nr rejestracyjny</th>
+      <th>Ubezpieczenie</th>
+      <th>Ostatni przegląd</th>
+      <th>Następny przegląd</th>
+      <th>Ostatni wyjazd</th>
+      <th>Mechanik</th>
+      <th>Status</th>
+      <th>Stan</th>
+      <th>Uwagi</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    {% for vehicle in vehicles %}
+    <tr>
+      <td>{{vehicle.id}}</td>
+      <td>{{vehicle.marka}}</td>
+      <td>{{vehicle.model}}</td>
+      <td>{{vehicle.typ}}</td>
+      <td>{{vehicle.numer_rej}}</td>
+      <td>{{vehicle.ubezpieczenie}}</td>
+      <td>-</td>
+      <td>-</td>
+      <td>{{vehicle.ostatni_wyjazd}}</td>
+      <td>-</td>
+      <td>{{vehicle.status}}</td>
+      <td>{{vehicle.stan}}</td>
+      <td>{{vehicle.uwagi}}</td>
+
+    {% endfor%}
+    </tbody>
+  </table>
+{% endblock content %}

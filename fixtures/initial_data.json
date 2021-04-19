@@ -432,11 +432,227 @@
     }
 },
 {
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+        "name": "Can add pojazdy",
+        "content_type": 7,
+        "codename": "add_pojazdy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+        "name": "Can change pojazdy",
+        "content_type": 7,
+        "codename": "change_pojazdy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+        "name": "Can delete pojazdy",
+        "content_type": 7,
+        "codename": "delete_pojazdy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+        "name": "Can view pojazdy",
+        "content_type": 7,
+        "codename": "view_pojazdy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+        "name": "Can add sprzet",
+        "content_type": 8,
+        "codename": "add_sprzet"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+        "name": "Can change sprzet",
+        "content_type": 8,
+        "codename": "change_sprzet"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+        "name": "Can delete sprzet",
+        "content_type": 8,
+        "codename": "delete_sprzet"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+        "name": "Can view sprzet",
+        "content_type": 8,
+        "codename": "view_sprzet"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+        "name": "Can add strazacy",
+        "content_type": 9,
+        "codename": "add_strazacy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+        "name": "Can change strazacy",
+        "content_type": 9,
+        "codename": "change_strazacy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+        "name": "Can delete strazacy",
+        "content_type": 9,
+        "codename": "delete_strazacy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+        "name": "Can view strazacy",
+        "content_type": 9,
+        "codename": "view_strazacy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+        "name": "Can add uslugi",
+        "content_type": 10,
+        "codename": "add_uslugi"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+        "name": "Can change uslugi",
+        "content_type": 10,
+        "codename": "change_uslugi"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+        "name": "Can delete uslugi",
+        "content_type": 10,
+        "codename": "delete_uslugi"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+        "name": "Can view uslugi",
+        "content_type": 10,
+        "codename": "view_uslugi"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+        "name": "Can add przeglad sprzet",
+        "content_type": 11,
+        "codename": "add_przegladsprzet"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+        "name": "Can change przeglad sprzet",
+        "content_type": 11,
+        "codename": "change_przegladsprzet"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+        "name": "Can delete przeglad sprzet",
+        "content_type": 11,
+        "codename": "delete_przegladsprzet"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+        "name": "Can view przeglad sprzet",
+        "content_type": 11,
+        "codename": "view_przegladsprzet"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 69,
+    "fields": {
+        "name": "Can add przeglad pojazdy",
+        "content_type": 12,
+        "codename": "add_przegladpojazdy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+        "name": "Can change przeglad pojazdy",
+        "content_type": 12,
+        "codename": "change_przegladpojazdy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+        "name": "Can delete przeglad pojazdy",
+        "content_type": 12,
+        "codename": "delete_przegladpojazdy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 72,
+    "fields": {
+        "name": "Can view przeglad pojazdy",
+        "content_type": 12,
+        "codename": "view_przegladpojazdy"
+    }
+},
+{
     "model": "auth.user",
     "pk": 1,
     "fields": {
-        "password": "pbkdf2_sha256$216000$Qvr3rDRClr5q$HHJehKVvmOmKRN3t1hNUIDfCC/tpNeFUqLy/MGa7owo=",
-        "last_login": "2021-04-19T17:06:47.789Z",
+        "password": "pbkdf2_sha256$260000$9nVs5kmMx2FBUOZywFP5Ds$qluJCQJ0hCNq125w88F8P1LQLJBGpqH5IvKaxYgKBL4=",
+        "last_login": "2021-04-19T19:35:02.250Z",
         "is_superuser": true,
         "username": "admin",
         "first_name": "",
@@ -447,6 +663,70 @@
         "date_joined": "2021-03-28T16:17:55.141Z",
         "groups": [],
         "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$SRL2BfycedK9lk92208ljV$A3tNiNkj15Yd+arj4iwqZg5soEYxmuRDFfzBOQIAtRI=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "pkostrzewa",
+        "first_name": "Paweł",
+        "last_name": "Kostrzewa",
+        "email": "pawel@kostrzewa.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-04-19T19:49:08Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "department.sprzet",
+    "pk": 1,
+    "fields": {
+        "nazwa": "Agregat prądotwórczy",
+        "marka": "FOGO",
+        "model": "FH 9540",
+        "parametry": "Moc maksymalna 8.1kVa",
+        "rok_prod": 2018,
+        "status": "W podziale",
+        "stan": "Sprawny",
+        "uwagi": "Zasilanie awaryjne remizy"
+    }
+},
+{
+    "model": "department.sprzet",
+    "pk": 2,
+    "fields": {
+        "nazwa": "Motopompa pływająca",
+        "marka": "Niagara",
+        "model": "Plus",
+        "parametry": "Maksymalna wydajność 1200l/min",
+        "rok_prod": 2017,
+        "status": "W podziale",
+        "stan": "Sprawny",
+        "uwagi": ""
+    }
+},
+{
+    "model": "department.strazacy",
+    "pk": 2,
+    "fields": {
+        "data_urodzenia": "1982-05-22",
+        "data_wstapienia": "2001-01-12",
+        "ostatnie_badanie": "2020-02-07",
+        "nastepne_badanie": "2023-02-07",
+        "ubezpieczenie": "2021-06-20",
+        "kierowca": true,
+        "termin_prawa_jazdy": "2035-05-17",
+        "termin_wkladki": "2023-11-29",
+        "termin_kpp": null,
+        "ostatnia_skladka": 2020,
+        "status": "Aktywny",
+        "uwagi": ""
     }
 },
 {
@@ -492,6 +772,28 @@
         "status": "W podziale",
         "stan": "Sprawny",
         "uwagi": ""
+    }
+},
+{
+    "model": "department.przegladsprzet",
+    "pk": 1,
+    "fields": {
+        "ostatni_przeglad": "2021-02-19",
+        "nastepny_przeglad": "2021-08-19",
+        "mechanik": 2,
+        "uwagi": "",
+        "sprzet": 1
+    }
+},
+{
+    "model": "department.przegladsprzet",
+    "pk": 2,
+    "fields": {
+        "ostatni_przeglad": "2021-02-19",
+        "nastepny_przeglad": "2021-08-19",
+        "mechanik": 2,
+        "uwagi": "",
+        "sprzet": 2
     }
 }
 ]

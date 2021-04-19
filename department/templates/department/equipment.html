@@ -19,20 +19,46 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-      <td>1</td>
-      <td>testtesttesttesttesttesttesttesttesttesttesttesttesttest</td>
-      <td>testtesttesttesttesttesttesttesttesttesttesttesttesttest</td>
-      <td>testtesttesttesttesttesttesttesttesttesttesttesttesttest</td>
-      <td>testtesttesttesttesttesttesttesttesttesttesttesttesttest</td>
-      <td>testtesttesttesttesttesttesttesttesttesttesttesttesttest</td>
-      <td>testtesttesttesttesttesttesttesttesttesttesttesttesttest</td>
-      <td>testtesttesttesttesttesttesttesttesttesttesttesttesttest</td>
-      <td>testtesttesttesttesttesttesttesttesttesttesttesttesttest</td>
-      <td>testtesttesttesttesttesttesttesttesttesttesttesttesttest</td>
-      <td>testtesttesttesttesttesttesttesttesttesttesttesttesttest</td>
-      <td>testtesttesttesttesttesttesttesttesttesttesttesttesttest</td>
-    </tr>
+    {% for equipment in object_list %}
+      <tr>
+        <td title="{{ equipment.pk }}">
+          {{ equipment.pk }}
+        </td>
+        <td title="{{ equipment.nazwa }}">
+          {{ equipment.nazwa }}
+        </td>
+        <td title="{{ equipment.marka }}">
+          {{ equipment.marka }}
+        </td>
+        <td title="{{ equipment.model }}">
+          {{ equipment.model }}
+        </td>
+        <td title="{{ equipment.parametry }}">
+          {{ equipment.parametry }}
+        </td>
+        <td title="{{ equipment.rok_prod }}">
+          {{ equipment.rok_prod }}
+        </td>
+        <td title="{{ equipment.przeglad_sprzet.last.ostatni_przeglad }}">
+          {{ equipment.przeglad_sprzet.last.ostatni_przeglad }}
+        </td>
+        <td title="{{ equipment.przeglad_sprzet.last.nastepny_przeglad }}">
+          {{ equipment.przeglad_sprzet.last.nastepny_przeglad }}
+        </td>
+        <td title="{{ equipment.przeglad_sprzet.last.mechanik }}">
+          {{ equipment.przeglad_sprzet.last.mechanik }}
+        </td>
+        <td title="{{ equipment.status }}">
+          {{ equipment.status }}
+        </td>
+        <td title="{{ equipment.stan }}">
+          {{ equipment.stan }}
+        </td>
+        <td title="{{ equipment.uwagi }}">
+          {{ equipment.uwagi }}
+        </td>
+      </tr>
+    {% endfor %}
     </tbody>
   </table>
 {% endblock content %}

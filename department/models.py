@@ -1,16 +1,21 @@
-from django.db import models
 from django.contrib.auth.models import User
-    
+from django.db import models
+
+
 class Sprzet(models.Model):
     nazwa = models.CharField(max_length=300)
     marka = models.CharField(max_length=50)
     model = models.CharField(max_length=50)
-    parametry = models.TextField(blank = True)
+    parametry = models.TextField(blank=True)
     rok_prod = models.PositiveIntegerField()
     status = models.CharField(max_length=50)
     stan = models.CharField(max_length=50)
-    uwagi = models.TextField(blank = True)
-    
+    uwagi = models.TextField(blank=True)
+
+    def __str__(self):
+        return f"{self.nazwa}, {self.marka} ({self.model})"
+
+
 class Strazacy(models.Model):
     user = models.OneToOneField(
         User,
@@ -25,11 +30,15 @@ class Strazacy(models.Model):
     kierowca = models.BooleanField(default=False)
     termin_prawa_jazdy = models.DateField(blank=True)
     termin_wkladki = models.DateField(blank=True)
-    termin_kpp = models.DateField(blank=True)
+    termin_kpp = models.DateField(blank=True, null=True)
     ostatnia_skladka = models.PositiveIntegerField()
     status = models.CharField(max_length=50)
-    uwagi = models.TextField(blank = True)
-    
+    uwagi = models.TextField(blank=True)
+
+    def __str__(self):
+        return f"{self.user.first_name} {self.user.last_name}"
+
+
 class Pojazdy(models.Model):
     marka = models.CharField(max_length=50)
     model = models.CharField(max_length=50)
@@ -39,24 +48,36 @@ class Pojazdy(models.Model):
     ostatni_wyjazd = models.DateField()
     status = models.CharField(max_length=50)
     stan = models.CharField(max_length=50)
-    uwagi = models.TextField(blank = True)
-    
+    uwagi = models.TextField(blank=True)
+
+    def __str__(self):
+        return f"{self.marka}, {self.model}, {self.numer_rej}"
+
+
 class PrzegladPojazdy(models.Model):
     ostatni_przeglad = models.DateField()
     nastepny_przeglad = models.DateField()
     ostatnia_wymiana_olej_filtr = models.DateField()
     przebieg_przywymianie = models.PositiveIntegerField()
     mechanik = models.ForeignKey(Strazacy, related_name='mechanik_pojazdy', on_delete=models.CASCADE)
-    uwagi = models.TextField(blank = True)
+    uwagi = models.TextField(blank=True)
     pojazd = models.ForeignKey(Pojazdy, related_name='przeglad_pojazdy', on_delete=models.CASCADE)
-    
+
+    def __str__(self):
+        return f"{self.pojazd} ({self.ostatni_przeglad} - {self.nastepny_przeglad})"
+
+
 class PrzegladSprzet(models.Model):
     ostatni_przeglad = models.DateField()
     nastepny_przeglad = models.DateField(blank=True)
     mechanik = models.ForeignKey(Strazacy, related_name='mechanik_sprzet', on_delete=models.CASCADE)
-    uwagi = models.TextField(blank = True)
+    uwagi = models.TextField(blank=True)
     sprzet = models.ForeignKey(Sprzet, related_name='przeglad_sprzet', on_delete=models.CASCADE)
-    
+
+    def __str__(self):
+        return f"{self.sprzet} ({self.ostatni_przeglad} - {self.nastepny_przeglad})"
+
+
 class Uslugi(models.Model):
     usluga = models.CharField(max_length=300)
     nazwa_firmy = models.CharField(max_length=100)
@@ -67,4 +88,7 @@ class Uslugi(models.Model):
     termin_oplaty = models.DateField()
     kwota = models.DecimalField(max_digits=8, decimal_places=2)
     osoba_odpowiedzialna = models.ForeignKey(Strazacy, related_name='uslugi_osoby', on_delete=models.CASCADE)
-    uwagi = models.TextField(blank = True)
+    uwagi = models.TextField(blank=True)
+
+    def __str__(self):
+        return f"{self.usluga}, {self.nazwa_firmy}, {self.adres_firmy}"

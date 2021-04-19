@@ -450,24 +450,6 @@
     }
 },
 {
-    "model": "auth.user",
-    "pk": 2,
-    "fields": {
-        "password": "pbkdf2_sha256$216000$HifAYD5nmLG0$b9s8iCpbwUB65SJ4NrXuPU6aI++t/K5FKGdCizT0+is=",
-        "last_login": "2021-03-29T18:15:45.368Z",
-        "is_superuser": false,
-        "username": "damian",
-        "first_name": "",
-        "last_name": "",
-        "email": "",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2021-03-28T16:19:00.989Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
     "model": "department.pojazdy",
     "pk": 1,
     "fields": {

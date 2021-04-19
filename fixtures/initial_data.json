@@ -216,21 +216,300 @@
     }
 },
 {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add przeglad sprzet",
+        "content_type": 7,
+        "codename": "add_przegladsprzet"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change przeglad sprzet",
+        "content_type": 7,
+        "codename": "change_przegladsprzet"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete przeglad sprzet",
+        "content_type": 7,
+        "codename": "delete_przegladsprzet"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view przeglad sprzet",
+        "content_type": 7,
+        "codename": "view_przegladsprzet"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add uslugi",
+        "content_type": 8,
+        "codename": "add_uslugi"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change uslugi",
+        "content_type": 8,
+        "codename": "change_uslugi"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete uslugi",
+        "content_type": 8,
+        "codename": "delete_uslugi"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view uslugi",
+        "content_type": 8,
+        "codename": "view_uslugi"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add pojazdy",
+        "content_type": 9,
+        "codename": "add_pojazdy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change pojazdy",
+        "content_type": 9,
+        "codename": "change_pojazdy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete pojazdy",
+        "content_type": 9,
+        "codename": "delete_pojazdy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view pojazdy",
+        "content_type": 9,
+        "codename": "view_pojazdy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add strazacy",
+        "content_type": 10,
+        "codename": "add_strazacy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change strazacy",
+        "content_type": 10,
+        "codename": "change_strazacy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete strazacy",
+        "content_type": 10,
+        "codename": "delete_strazacy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view strazacy",
+        "content_type": 10,
+        "codename": "view_strazacy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can add przeglad pojazdy",
+        "content_type": 11,
+        "codename": "add_przegladpojazdy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+        "name": "Can change przeglad pojazdy",
+        "content_type": 11,
+        "codename": "change_przegladpojazdy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+        "name": "Can delete przeglad pojazdy",
+        "content_type": 11,
+        "codename": "delete_przegladpojazdy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+        "name": "Can view przeglad pojazdy",
+        "content_type": 11,
+        "codename": "view_przegladpojazdy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+        "name": "Can add sprzet",
+        "content_type": 12,
+        "codename": "add_sprzet"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+        "name": "Can change sprzet",
+        "content_type": 12,
+        "codename": "change_sprzet"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+        "name": "Can delete sprzet",
+        "content_type": 12,
+        "codename": "delete_sprzet"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+        "name": "Can view sprzet",
+        "content_type": 12,
+        "codename": "view_sprzet"
+    }
+},
+{
     "model": "auth.user",
     "pk": 1,
     "fields": {
-        "password": "pbkdf2_sha256$216000$fwcBAtLl5eZr$rtONuRTVV3feP3ex7zmrA0VjJOhgtGrYhs51hiwCVEQ=",
-        "last_login": null,
+        "password": "pbkdf2_sha256$216000$Qvr3rDRClr5q$HHJehKVvmOmKRN3t1hNUIDfCC/tpNeFUqLy/MGa7owo=",
+        "last_login": "2021-04-19T17:06:47.789Z",
         "is_superuser": true,
-        "username": "root",
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "admin@admin.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2021-03-28T16:17:55.141Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$216000$HifAYD5nmLG0$b9s8iCpbwUB65SJ4NrXuPU6aI++t/K5FKGdCizT0+is=",
+        "last_login": "2021-03-29T18:15:45.368Z",
+        "is_superuser": false,
+        "username": "damian",
         "first_name": "",
         "last_name": "",
         "email": "",
-        "is_staff": true,
+        "is_staff": false,
         "is_active": true,
-        "date_joined": "2021-03-25T20:25:01.328Z",
+        "date_joined": "2021-03-28T16:19:00.989Z",
         "groups": [],
         "user_permissions": []
+    }
+},
+{
+    "model": "department.pojazdy",
+    "pk": 1,
+    "fields": {
+        "marka": "MAN",
+        "model": "TGM 13.290",
+        "typ": "W0 LIW 20/11/2020 20/11/2021 2",
+        "numer_rej": "W0 LIW",
+        "ubezpieczenie": "2021-04-30",
+        "ostatni_wyjazd": "2021-04-19",
+        "status": "W podziale",
+        "stan": "Sprawny",
+        "uwagi": ""
+    }
+},
+{
+    "model": "department.pojazdy",
+    "pk": 2,
+    "fields": {
+        "marka": "StarMan",
+        "model": "14.225",
+        "typ": "GBA 2/27",
+        "numer_rej": "WWE J462",
+        "ubezpieczenie": "2021-05-13",
+        "ostatni_wyjazd": "2021-04-12",
+        "status": "W podziale",
+        "stan": "Sprawny",
+        "uwagi": ""
+    }
+},
+{
+    "model": "department.pojazdy",
+    "pk": 3,
+    "fields": {
+        "marka": "Mercedes",
+        "model": "208D",
+        "typ": "SLKw",
+        "numer_rej": "WWE 54AT",
+        "ubezpieczenie": "2021-07-20",
+        "ostatni_wyjazd": "2021-04-06",
+        "status": "W podziale",
+        "stan": "Sprawny",
+        "uwagi": ""
     }
 }
 ]

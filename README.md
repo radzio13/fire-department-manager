@@ -41,9 +41,9 @@ help:                   Show this help.
 ## Fixtures credentials
 
 * **Login**
-  root
+  admin
 * **Password**
-  root
+  admin
 
 ## Documents
 All of the documents can be found in the [docs](docs) directory

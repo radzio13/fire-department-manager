@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="confirm-form">
+    <a href="{{ go_back }}">Powrót</a>
+    <p>
+      <span class="field-name">Marka</span>
+      <span class="field-value">{{ object.marka}}</span>
+    </p>
+    <p>
+      <span class="field-name">Model</span>
+      <span class="field-value">{{ object.model }}</span>
+    </p>
+    <p>
+      <span class="field-name">Typ</span>
+      <span class="field-value">{{ object.typ }}</span>
+    </p>
+    <p>
+      <span class="field-name">Numer rejestracyjny</span>
+      <span class="field-value">{{ object.numer_rej }}</span>
+    </p>
+    <p>
+      <span class="field-name">Ubezpieczenie</span>
+      <span class="field-value">{{ object.ubezpieczenie }}</span>
+    </p>
+    <p>
+      <span class="field-name">Ostatni wyjazd</span>
+      <span class="field-value">{{ object.ostatni_wyjazd }}</span>
+    </p>
+    <p>
+      <span class="field-name">Ostatni przegląd</span>
+      <span class="field-value">{{ object.przeglad_pojazdy.last.ostatni_przeglad }}</span>
+    </p>
+    <p>
+      <span class="field-name">Następny przegląd</span>
+      <span class="field-value">{{ object.przeglad_pojazdy.last.nastepny_przeglad }}</span>
+    </p>
+    <p>
+      <span class="field-name">Mechanik</span>
+      <span class="field-value">{{ object.przeglad_pojazdy.last.mechanik }}</span>
+    </p>
+    <p>
+      <span class="field-name">Status</span>
+      <span class="field-value">{{ object.status }}</span>
+    </p>
+    <p>
+      <span class="field-name">Stan</span>
+      <span class="field-value">{{ object.stan }}</span>
+    </p>
+    <p>
+      <span class="field-name">Uwagi</span>
+      <span class="field-value">{{ object.uwagi }}</span>
+    </p>
+
+    <div class="pull-right">
+      <a class="action-secondary" href="{% url 'vehicle-delete' object.pk %}">Usuń</a>
+      <a class="action-primary" href="{% url 'vehicle-update' object.pk %}">Edytuj</a>
+    </div> 
+  </div>
+{% endblock content %}

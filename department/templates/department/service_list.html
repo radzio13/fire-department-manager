@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <p class="pull-right"><a class="action-primary" href="{% url 'service-create' %}">Dodaj nowy</a></p>
+  <table>
+    <thead>
+    <tr>
+      <th>Usluga</th>
+      <th>Nazwa firmy</th>
+      <th>Adres firmy</th>
+      <th>Miasto</th>
+      <th>Tel:</th>
+      <th>Termin wazności</th>
+      <th>Termin opłaty</th>
+      <th>Kwota</th>
+      <th>Osoba odpowiedzialna</th>
+      <th>Uwagi</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for service in object_list%}
+    <tr>
+      <td><a href="{% url 'service-detail' service.pk %}">{{ service.pk }}</a></td>
+      <td>{{service.usluga}}</td>
+      <td>{{service.nazwa_firmy}}</td>
+      <td>{{service.adres_firmy}}</td>
+      <td>{{service.miasto}}</td>
+      <td>{{service.tel_kontaktowy}}</td>
+      <td>{{service.termin_waznosci}}</td>
+      <td>{{service.termin_oplaty}}</td>
+      <td>{{service.kwota}}</td>
+      <td>{{service.osoba_odpowiedzialna}}</td>
+      <td>{{service.uwagi}}</td>
+
+    {% endfor%}
+    </tbody>
+  </table>
+{% endblock content %}

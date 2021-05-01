@@ -5,7 +5,18 @@ from . import views
 urlpatterns = [
     path('', views.HomeView.as_view(), name='home'),
     path('sprzet/', views.EquipmentView.as_view(), name='equipment-list'),
-    path('pojazdy/', views.VehicleView.as_view(), name='vehicle-list'),
+
+    path('pojazdy/', views.VehicleListView.as_view(), name='vehicle-list'),
+    path('pojazdy/nowy/', views.VehicleCreateView.as_view(), name='vehicle-create'),
+    path('pojazdy/<int:pk>/', views.VehicleDetailView.as_view(), name='vehicle-detail'),
+    path('pojazdy/<int:pk>/edycja/', views.VehicleUpdateView.as_view(), name='vehicle-update'),
+    path('pojazdy/<int:pk>/usun/', views.VehicleDeleteView.as_view(), name='vehicle-delete'),
+
+    path('uslugi/', views.ServiceListView.as_view(), name='service-list'),
+    path('uslugi/nowy/', views.ServiceCreateView.as_view(), name='service-create'),
+    path('uslugi/<int:pk>/', views.ServiceDetailView.as_view(), name='service-detail'),
+    path('uslugi/<int:pk>/edycja/', views.ServiceUpdateView.as_view(), name='service-update'),
+    path('uslugi/<int:pk>/usun/', views.ServiceDeleteView.as_view(), name='service-delete'),
 
     path('strazacy/', views.FirefighterListView.as_view(), name='firefighter-list'),
     path('strazacy/nowy/', views.FirefighterCreateView.as_view(), name='firefighter-create'),

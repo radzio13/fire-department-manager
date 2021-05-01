@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 
-from department.models import Strazacy
+from department.models import Strazacy, Pojazdy, Uslugi
 
 
 class FirefighterUpdateForm(forms.ModelForm):
@@ -60,3 +60,15 @@ class FirefighterCreateForm(forms.ModelForm):
         if User.objects.filter(username=username).exists():
             raise ValidationError('Użytkownik z taką nazwą już istnieje')
         return username
+
+class VehicleCreateForm(forms.ModelForm):
+
+    class Meta:
+        model = Pojazdy
+        fields = '__all__'
+
+class ServiceCreateForm(forms.ModelForm):
+    
+    class Meta:
+        model = Uslugi
+        fields = '__all__'

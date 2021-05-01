@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="confirm-form">
+    <a href="{{ go_back }}">Powrót</a>
+    <p>
+      <span class="field-name">Usluga</span>
+      <span class="field-value">{{ object.usluga}}</span>
+    </p>
+    <p>
+      <span class="field-name">Nazwa firmy</span>
+      <span class="field-value">{{ object.nazwa_firmy }}</span>
+    </p>
+    <p>
+      <span class="field-name">Adres firmy</span>
+      <span class="field-value">{{ object.adres_firmy }}</span>
+    </p>
+    <p>
+      <span class="field-name">Miasto</span>
+      <span class="field-value">{{ object.miasto }}</span>
+    </p>
+    <p>
+      <span class="field-name">Telefon</span>
+      <span class="field-value">{{ object.tel_kontaktowy }}</span>
+    </p>
+    <p>
+      <span class="field-name">Termin wazności</span>
+      <span class="field-value">{{ object.termin_waznosci }}</span>
+    </p>
+    <p>
+      <span class="field-name">Termin opłaty</span>
+      <span class="field-value">{{ object.termin_oplaty }}</span>
+    </p>
+    <p>
+      <span class="field-name">Kwota</span>
+      <span class="field-value">{{ object.kwota}}</span>
+    </p>
+    <p>
+      <span class="field-name">Osoba odpowiedzialna</span>
+      <span class="field-value">{{ object.osoba_odpowiedzialna}}</span>
+    </p>
+    <p>
+      <span class="field-name">Uwagi</span>
+      <span class="field-value">{{ object.uwagi}}</span>
+    </p>
+
+    <div class="pull-right">
+      <a class="action-secondary" href="{% url 'service-delete' object.pk %}">Usuń</a>
+      <a class="action-primary" href="{% url 'service-update' object.pk %}">Edytuj</a>
+    </div> 
+  </div>
+{% endblock content %}

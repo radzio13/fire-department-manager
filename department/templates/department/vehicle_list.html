@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+  <p class="pull-right"><a class="action-primary" href="{% url 'vehicle-create' %}">Dodaj nowy</a></p>
   <table>
     <thead>
     <tr>
@@ -21,18 +22,18 @@
     </tr>
     </thead>
     <tbody>
-    {% for vehicle in vehicles %}
+    {% for vehicle in object_list%}
     <tr>
-      <td>{{vehicle.id}}</td>
+      <td><a href="{% url 'vehicle-detail' vehicle.pk %}">{{ vehicle.pk }}</a></td>
       <td>{{vehicle.marka}}</td>
       <td>{{vehicle.model}}</td>
       <td>{{vehicle.typ}}</td>
       <td>{{vehicle.numer_rej}}</td>
       <td>{{vehicle.ubezpieczenie}}</td>
-      <td>-</td>
-      <td>-</td>
+      <td>{{vehicle.przeglad_pojazdy.last.ostatni_przeglad}}</td>
+      <td>{{vehicle.przeglad_pojazdy.last.nastepny_przeglad}}</td>
       <td>{{vehicle.ostatni_wyjazd}}</td>
-      <td>-</td>
+      <td>{{vehicle.przeglad_pojazdy.last.mechanik}}</td>
       <td>{{vehicle.status}}</td>
       <td>{{vehicle.stan}}</td>
       <td>{{vehicle.uwagi}}</td>

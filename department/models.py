@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
-
+from datetime import date
 
 class Sprzet(models.Model):
     nazwa = models.CharField(max_length=300)
@@ -52,6 +52,10 @@ class Pojazdy(models.Model):
 
     def __str__(self):
         return f"{self.marka}, {self.model}, {self.numer_rej}"
+        
+    @property
+    def is_past_due(self):
+    	return date.today() > self.ubezpieczenie
 
 
 class PrzegladPojazdy(models.Model):

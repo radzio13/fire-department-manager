@@ -1,10 +1,15 @@
 from django.views.generic import TemplateView
+from django.http import HttpResponseRedirect
+from django.urls import reverse_lazy, reverse
+from django.views.generic import ListView, CreateView, DetailView, UpdateView, DeleteView
 
-from department.models import UwagaSprzet, UwagaStrazacy, UwagaPojazdy, UwagaUslugi
+from department.models import Pojazdy, Sprzet, UwagaSprzet, UwagaStrazacy, UwagaPojazdy, UwagaUslugi
 
 
-class HomeView(TemplateView):
+class HomeListView(ListView):
     template_name = 'department/home.html'
+    model = Pojazdy
+    ordering = ('pk',)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -16,3 +21,9 @@ class HomeView(TemplateView):
             "services": UwagaUslugi.objects.order_by('created_at'),
         })
         return context
+
+
+class HomeListViewEquipment(ListView):
+    template_name = 'department/home_equipment.html'
+    model = Sprzet
+    ordering = ('pk',)

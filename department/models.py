@@ -37,7 +37,10 @@ class Strazacy(models.Model):
 
     def __str__(self):
         return f"{self.user.first_name} {self.user.last_name}"
-
+        
+    @property
+    def is_past_due(self):
+    	return date.today() > self.nastepne_badanie or date.today() > self.ubezpieczenie
 
 class Pojazdy(models.Model):
     marka = models.CharField(max_length=50)
@@ -96,3 +99,8 @@ class Uslugi(models.Model):
 
     def __str__(self):
         return f"{self.usluga}, {self.nazwa_firmy}, {self.adres_firmy}"
+        
+    @property
+    def is_past_due(self):
+    	return date.today() > self.termin_waznosci or date.today() > self.termin_oplaty
+

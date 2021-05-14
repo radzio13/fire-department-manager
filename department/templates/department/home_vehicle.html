@@ -1,0 +1,42 @@
+<h2>Pojazdy</h2>
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Marka</th>
+      <th>Model</th>
+      <th>Typ</th>
+      <th>Nr rejestracyjny</th>
+      <th>Ubezpieczenie</th>
+      <th>Ostatni przegląd</th>
+      <th>Następny przegląd</th>
+      <th>Ostatni wyjazd</th>
+      <th>Mechanik</th>
+      <th>Status</th>
+      <th>Stan</th>
+      <th>Uwagi</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    {% for vehicle in pojazdy%}
+	{% if vehicle.is_past_due %}
+    <tr>
+      <td><a href="{% url 'vehicle-detail' vehicle.pk %}">{{ vehicle.pk }}</a></td>
+      <td>{{vehicle.marka}}</td>
+      <td>{{vehicle.model}}</td>
+      <td>{{vehicle.typ}}</td>
+      <td>{{vehicle.numer_rej}}</td>
+      <td style="color:red">{{vehicle.ubezpieczenie}}</td>
+      <td>{{vehicle.przeglad_pojazdy.last.ostatni_przeglad}}</td>
+      <td>{{vehicle.przeglad_pojazdy.last.nastepny_przeglad}}</td>
+      <td>{{vehicle.ostatni_wyjazd}}</td>
+      <td>{{vehicle.przeglad_pojazdy.last.mechanik}}</td>
+      <td>{{vehicle.status}}</td>
+      <td>{{vehicle.stan}}</td>
+      <td>{{vehicle.uwagi}}</td>
+    </tr>
+	{% endif %}
+    {% endfor%}
+    </tbody>
+  </table>

@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <p class="pull-right"><a class="action-primary" href="{% url 'equipment-create' %}">Dodaj nowy</a></p>
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nazwa</th>
+      <th>Marka</th>
+      <th>Model</th>
+      <th>Parametry</th>
+      <th>Rok produkcji</th>
+      <th>Ostatni przegląd</th>
+      <th>Następny przegląd</th>
+      <th>Mechanik</th>
+      <th>Status</th>
+      <th>Stan</th>
+      <th>Uwagi</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for equipment in object_list %}
+      <tr>
+        <td title="{{ equipment.pk }}">
+          <a href="{% url 'equipment-detail' equipment.pk %}">{{ equipment.pk }}</a>
+        </td>
+        <td title="{{ equipment.nazwa }}">
+          {{ equipment.nazwa }}
+        </td>
+        <td title="{{ equipment.marka }}">
+          {{ equipment.marka }}
+        </td>
+        <td title="{{ equipment.model }}">
+          {{ equipment.model }}
+        </td>
+        <td title="{{ equipment.parametry }}">
+          {{ equipment.parametry }}
+        </td>
+        <td title="{{ equipment.rok_prod }}">
+          {{ equipment.rok_prod }}
+        </td>
+        <td title="{{ equipment.przeglad_sprzet.last.ostatni_przeglad }}">
+          {{ equipment.przeglad_sprzet.last.ostatni_przeglad }}
+        </td>
+        <td title="{{ equipment.przeglad_sprzet.last.nastepny_przeglad }}">
+          {{ equipment.przeglad_sprzet.last.nastepny_przeglad }}
+        </td>
+        <td title="{{ equipment.przeglad_sprzet.last.mechanik }}">
+          {{ equipment.przeglad_sprzet.last.mechanik }}
+        </td>
+        <td title="{{ equipment.status }}">
+          {{ equipment.status }}
+        </td>
+        <td title="{{ equipment.stan }}">
+          {{ equipment.stan }}
+        </td>
+        <td title="{{ equipment.uwagi }}">
+          {{ equipment.uwagi }}
+        </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+{% endblock content %}

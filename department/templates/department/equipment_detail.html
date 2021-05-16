@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="confirm-form">
+    <a href="{{ go_back }}">Powrót</a>
+    <p>
+      <span class="field-name">Nazwa:</span>
+      <span class="field-value">{{ object.nazwa }}</span>
+    </p>
+    <p>
+      <span class="field-name">Marka:</span>
+      <span class="field-value">{{ object.marka }}</span>
+    </p>
+    <p>
+      <span class="field-name">Model:</span>
+      <span class="field-value">{{ object.model }}</span>
+    </p>
+    <p>
+      <span class="field-name">Parametry:</span>
+      <span class="field-value">{{ object.parametry }}</span>
+    </p>
+    <p>
+      <span class="field-name">Rok produkcji:</span>
+      <span class="field-value">{{ object.rok_prod }}</span>
+    </p>
+    <p>
+      <span class="field-name">Przeglądy:</span>
+      <span class="field-value">{{ object.przeglad_sprzet.last.ostatni_przeglad }} - {{ object.przeglad_sprzet.last.nastepny_przeglad }}</span>
+    </p>
+    <p>
+      <span class="field-name">Mechanik:</span>
+      <span class="field-value">{{ object.przeglad_sprzet.last.mechanik }}</span>
+    </p>
+    <p>
+      <span class="field-name">Status:</span>
+      <span class="field-value">{{ object.status }}</span>
+    </p>
+    <p>
+      <span class="field-name">Stan:</span>
+      <span class="field-value">{{ object.stan }}</span>
+    </p>
+    <p>
+      <span class="field-name">Uwagi:</span>
+      <span class="field-value">{{ object.uwagi | default:'-' }}</span>
+    </p>
+    <div class="pull-right">
+      <a class="action-secondary" href="{% url 'equipment-delete' object.pk %}">Usuń</a>
+      <a class="action-primary" href="{% url 'equipment-update' object.pk %}">Edytuj</a>
+    </div>
+  </div>
+{% endblock content %}

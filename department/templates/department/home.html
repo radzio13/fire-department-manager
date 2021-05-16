@@ -7,4 +7,69 @@
   <section>
     <img class='main-img' src="{% static 'media/straz.jpeg' %}" alt="Straż pożarna"/>
   </section>
+  <h2>Lista zgłoszonych uwag</h2>
+
+  <table>
+    <thead>
+    <tr>
+      <th>Nazwa</th>
+      <th>Komentarz</th>
+      <th>Data dodania</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for comment in firefighters %}
+      <tr>
+        <td title="{{ comment.subject }}">
+          <a href="{% url 'firefighter-detail' comment.subject.pk %}">{{ comment.subject }}</a>
+        </td>
+        <td title="{{ comment.content }}">
+            {{ comment.content }}
+        </td>
+        <td title="{{ comment.created_at }}">
+            {{ comment.created_at }}
+        </td>
+      </tr>
+    {% endfor %}
+    {% for comment in equipments %}
+      <tr>
+        <td title="{{ comment.subject }}">
+          <a href="{% url 'equipment-detail' comment.subject.pk %}">{{ comment.subject }}</a>
+        </td>
+        <td title="{{ comment.content }}">
+          {{ comment.content }}
+        </td>
+        <td title="{{ comment.created_at }}">
+          {{ comment.created_at }}
+        </td>
+      </tr>
+    {% endfor %}
+    {% for comment in vehicles %}
+      <tr>
+        <td title="{{ comment.subject }}">
+          <a href="{% url 'vehicle-detail' comment.subject.pk %}">{{ comment.subject }}</a>
+        </td>
+        <td title="{{ comment.content }}">
+          {{ comment.content }}
+        </td>
+        <td title="{{ comment.created_at }}">
+          {{ comment.created_at }}
+        </td>
+      </tr>
+    {% endfor %}
+    {% for comment in services %}
+      <tr>
+        <td title="{{ comment.subject }}">
+          <a href="{% url 'service-detail' comment.subject.pk %}">{{ comment.subject }}</a>
+        </td>
+        <td title="{{ comment.content }}">
+          {{ comment.content }}
+        </td>
+        <td title="{{ comment.created_at }}">
+          {{ comment.created_at }}
+        </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
 {% endblock %}

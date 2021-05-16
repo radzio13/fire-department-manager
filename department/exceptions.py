@@ -1,0 +1,2 @@
+class SubjectException(Exception):
+    pass

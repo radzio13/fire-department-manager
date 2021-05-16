@@ -1,3 +1,6 @@
+from enum import auto, Enum
+
+from django.contrib.auth import get_user_model
 from django.contrib.auth.models import User
 from django.db import models
 
@@ -92,3 +95,30 @@ class Uslugi(models.Model):
 
     def __str__(self):
         return f"{self.usluga}, {self.nazwa_firmy}, {self.adres_firmy}"
+
+
+class Uwaga(models.Model):
+    class Status(Enum):
+        NEW = auto()
+        DONE = auto()
+        REJECTED = auto()
+
+    content = models.TextField()
+    author = models.ForeignKey(get_user_model(), on_delete=models.SET_NULL, null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    status = models.PositiveSmallIntegerField(choices=((status.value, status.name) for status in Status), default=Status.NEW.value)
+
+    class Meta:
+        abstract = True
+
+class UwagaSprzet(Uwaga):
+    subject = models.ForeignKey(Sprzet, on_delete=models.CASCADE)
+
+class UwagaStrazacy(Uwaga):
+    subject = models.ForeignKey(Strazacy, on_delete=models.CASCADE)
+
+class UwagaPojazdy(Uwaga):
+    subject = models.ForeignKey(Pojazdy, on_delete=models.CASCADE)
+
+class UwagaUslugi(Uwaga):
+    subject = models.ForeignKey(Uslugi, on_delete=models.CASCADE)

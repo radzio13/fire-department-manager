@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
   <div class="confirm-form">
+    <a href="#comment-modal" class="make-comment" data-type="vehicle" data-id="{{ object.pk }}">Zgłoś uwagę</a>
     <a href="{{ go_back }}">Powrót</a>
     <p>
       <span class="field-name">Marka</span>
@@ -54,6 +55,8 @@
     <div class="pull-right">
       <a class="action-secondary" href="{% url 'vehicle-delete' object.pk %}">Usuń</a>
       <a class="action-primary" href="{% url 'vehicle-update' object.pk %}">Edytuj</a>
-    </div> 
+    </div>
   </div>
+
+ {% include 'common/modal.html' %}
 {% endblock content %}

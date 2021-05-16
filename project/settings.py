@@ -41,7 +41,9 @@ DJANGO_INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
-THIRD_INSTALLED_APPS = []
+THIRD_INSTALLED_APPS = [
+    'rest_framework',
+]
 
 LOCAL_INSTALLED_APPS = [
     'department.apps.DepartmentConfig'

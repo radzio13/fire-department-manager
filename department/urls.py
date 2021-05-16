@@ -1,10 +1,11 @@
 from django.urls import path
 
 from . import views
+from .api import make_comment
 
 urlpatterns = [
     path('', views.HomeView.as_view(), name='home'),
-    
+
     path('sprzet/', views.EquipmentListView.as_view(), name='equipment-list'),
     path('sprzet/nowy/', views.EquipmentCreateView.as_view(), name='equipment-create'),
     path('sprzet/<int:pk>/', views.EquipmentDetailView.as_view(), name='equipment-detail'),
@@ -28,4 +29,6 @@ urlpatterns = [
     path('strazacy/<int:pk>/', views.FirefighterDetailView.as_view(), name='firefighter-detail'),
     path('strazacy/<int:pk>/edycja/', views.FirefighterUpdateView.as_view(), name='firefighter-update'),
     path('strazacy/<int:pk>/usun/', views.FirefighterDeleteView.as_view(), name='firefighter-delete'),
+
+    path('api/make-comment/', make_comment, name='make-comment'),
 ]

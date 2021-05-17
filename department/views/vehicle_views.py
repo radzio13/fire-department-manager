@@ -5,6 +5,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy, reverse
 from department.models import Pojazdy
 from department.forms import VehicleCreateForm
+from django.contrib.auth.mixins import PermissionRequiredMixin
 
 class VehicleListView(ListView):
     template_name = 'department/vehicle_list.html'
@@ -12,12 +13,12 @@ class VehicleListView(ListView):
     ordering = ('pk',)
 
 
-class VehicleCreateView(CreateView):
+class VehicleCreateView(PermissionRequiredMixin, CreateView) :
     template_name = 'department/vehicle_form.html'
     model = Pojazdy
     form_class = VehicleCreateForm
     success_url = reverse_lazy('vehicle-list')
-
+    permission_required = 'department.can_add_pojazdy'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -39,10 +40,12 @@ class VehicleDetailView(DetailView):
         return context
 
 
-class VehicleUpdateView(UpdateView):
+class VehicleUpdateView(PermissionRequiredMixin, UpdateView):
     template_name = 'department/vehicle_form.html'
     model = Pojazdy
     form_class = VehicleCreateForm
+    permission_required = 'department.can_change_pojazdy'
+
 
     def get_success_url(self):
         return reverse('vehicle-detail', args=(self.kwargs['pk'],))
@@ -55,10 +58,12 @@ class VehicleUpdateView(UpdateView):
         return context
 
 
-class VehicleDeleteView(DeleteView):
+class VehicleDeleteView(PermissionRequiredMixin, DeleteView):
     model = Pojazdy
     template_name = 'department/vehicle_confirm_delete.html'
     success_url = reverse_lazy('vehicle-list')
+    permission_required = 'department.can_delete_pojazdy'
+
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

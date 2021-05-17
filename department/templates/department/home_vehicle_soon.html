@@ -20,21 +20,21 @@
     </thead>
     <tbody>
     {% for vehicle in pojazdy%}
-	{% if vehicle.is_past_due or vehicle.przeglad_pojazdy.last.is_past_due %}
+	{% if vehicle.is_soon_past_due and not vehicle.is_past_due or vehicle.przeglad_pojazdy.last.is_soon_past_due and not vehicle.przeglad_pojazdy.last.is_past_due %}
     <tr>
       <td><a href="{% url 'vehicle-detail' vehicle.pk %}">{{ vehicle.pk }}</a></td>
       <td>{{vehicle.marka}}</td>
       <td>{{vehicle.model}}</td>
       <td>{{vehicle.typ}}</td>
       <td>{{vehicle.numer_rej}}</td>
-      {% if vehicle.is_past_due %}
-      	<td style="color:red">{{vehicle.ubezpieczenie}}</td>
+	  {% if vehicle.is_soon_past_due %}
+      	<td style="color:orange">{{vehicle.ubezpieczenie}}</td>
       {% else %}
       	<td>{{vehicle.ubezpieczenie}}</td>
       {% endif %}
       <td>{{vehicle.przeglad_pojazdy.last.ostatni_przeglad}}</td>
-      {% if vehicle.przeglad_pojazdy.last.is_past_due %}
-      	<td style="color:red">{{vehicle.przeglad_pojazdy.last.nastepny_przeglad}}</td>
+      {% if vehicle.przeglad_pojazdy.last.is_soon_past_due %}
+      	<td style="color:orange">{{vehicle.przeglad_pojazdy.last.nastepny_przeglad}}</td>
       {% else %}
       	<td>{{vehicle.przeglad_pojazdy.last.nastepny_przeglad}}</td>
       {% endif %}   

@@ -18,9 +18,9 @@
     </tr>
     </thead>
     {% for equipment in sprzet %}
-    {% if equipment.przeglad_sprzet.last.is_past_due %}
+    {% if equipment.przeglad_sprzet.last.is_soon_past_due and not equipment.przeglad_sprzet.last.is_past_due %}
     <tbody>
-       <tr>
+      <tr>
         <td><a href="{% url 'equipment-detail' equipment.pk %}">{{ equipment.pk }}</a></td>
         <td>{{ equipment.nazwa }}</td>
         <td>{{ equipment.marka }}</td>
@@ -28,8 +28,8 @@
         <td>{{ equipment.parametry }}</td>
         <td>{{ equipment.rok_prod }}</td>
         <td>{{ equipment.przeglad_sprzet.last.ostatni_przeglad }}</td>
-        {% if equipment.przeglad_sprzet.last.is_past_due %}
-        <td style="color:red">{{ equipment.przeglad_sprzet.last.nastepny_przeglad }}</td>
+        {% if equipment.przeglad_sprzet.last.is_soon_past_due %}
+        <td style="color:orange">{{ equipment.przeglad_sprzet.last.nastepny_przeglad }}</td>
         {% else %}
         <td>{{ equipment.przeglad_sprzet.last.nastepny_przeglad }}</td>
         {% endif %}      

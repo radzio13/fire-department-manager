@@ -652,7 +652,7 @@
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$260000$9nVs5kmMx2FBUOZywFP5Ds$qluJCQJ0hCNq125w88F8P1LQLJBGpqH5IvKaxYgKBL4=",
-        "last_login": "2021-04-19T19:35:02.250Z",
+        "last_login": "2021-05-16T18:58:08.361Z",
         "is_superuser": true,
         "username": "admin",
         "first_name": "",
@@ -679,6 +679,42 @@
         "is_staff": false,
         "is_active": true,
         "date_joined": "2021-04-19T19:49:08Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$tnri0ppScAVFvAW9g7h8ip$GRdb4UgusCpn+8x23+Xnat1BknBC270SfHBVABglhl4=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "janekn",
+        "first_name": "Jan",
+        "last_name": "Nowak",
+        "email": "jannow@o2.pl",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-05-16T19:57:11.154Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$MbbmSoptzDHAzxsAkk1J0N$rpvvdxpXoe2Y7UE6yiEVPoNLUSt69JcvW+pKy80kXfk=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "janekn12",
+        "first_name": "Jan",
+        "last_name": "Nowak",
+        "email": "jannow@o2.pl",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-05-16T19:58:31.945Z",
         "groups": [],
         "user_permissions": []
     }
@@ -719,12 +755,30 @@
         "data_wstapienia": "2001-01-12",
         "ostatnie_badanie": "2020-02-07",
         "nastepne_badanie": "2023-02-07",
-        "ubezpieczenie": "2021-06-20",
+        "ubezpieczenie": "2021-05-20",
         "kierowca": true,
         "termin_prawa_jazdy": "2035-05-17",
         "termin_wkladki": "2023-11-29",
         "termin_kpp": null,
         "ostatnia_skladka": 2020,
+        "status": "Aktywny",
+        "uwagi": ""
+    }
+},
+{
+    "model": "department.strazacy",
+    "pk": 4,
+    "fields": {
+        "data_urodzenia": "1980-05-13",
+        "data_wstapienia": "2000-03-22",
+        "ostatnie_badanie": "2020-05-12",
+        "nastepne_badanie": "2021-05-12",
+        "ubezpieczenie": "2022-08-12",
+        "kierowca": true,
+        "termin_prawa_jazdy": "2022-08-12",
+        "termin_wkladki": "2022-08-12",
+        "termin_kpp": "2022-05-19",
+        "ostatnia_skladka": 2021,
         "status": "Aktywny",
         "uwagi": ""
     }
@@ -775,11 +829,50 @@
     }
 },
 {
+    "model": "department.przegladpojazdy",
+    "pk": 1,
+    "fields": {
+        "ostatni_przeglad": "2020-05-16",
+        "nastepny_przeglad": "2021-04-16",
+        "ostatnia_wymiana_olej_filtr": "2021-05-16",
+        "przebieg_przywymianie": 2512,
+        "mechanik": 2,
+        "uwagi": "",
+        "pojazd": 1
+    }
+},
+{
+    "model": "department.przegladpojazdy",
+    "pk": 2,
+    "fields": {
+        "ostatni_przeglad": "2021-05-16",
+        "nastepny_przeglad": "2021-05-28",
+        "ostatnia_wymiana_olej_filtr": "2021-05-16",
+        "przebieg_przywymianie": 53212,
+        "mechanik": 2,
+        "uwagi": "",
+        "pojazd": 3
+    }
+},
+{
+    "model": "department.przegladpojazdy",
+    "pk": 3,
+    "fields": {
+        "ostatni_przeglad": "2021-05-16",
+        "nastepny_przeglad": "2021-12-16",
+        "ostatnia_wymiana_olej_filtr": "2021-05-16",
+        "przebieg_przywymianie": 32001,
+        "mechanik": 2,
+        "uwagi": "",
+        "pojazd": 2
+    }
+},
+{
     "model": "department.przegladsprzet",
     "pk": 1,
     "fields": {
         "ostatni_przeglad": "2021-02-19",
-        "nastepny_przeglad": "2021-08-19",
+        "nastepny_przeglad": "2021-06-12",
         "mechanik": 2,
         "uwagi": "",
         "sprzet": 1
@@ -790,10 +883,42 @@
     "pk": 2,
     "fields": {
         "ostatni_przeglad": "2021-02-19",
-        "nastepny_przeglad": "2021-08-19",
+        "nastepny_przeglad": "2021-04-19",
         "mechanik": 2,
         "uwagi": "",
         "sprzet": 2
+    }
+},
+{
+    "model": "department.uslugi",
+    "pk": 1,
+    "fields": {
+        "usluga": "Alarmowanie",
+        "nazwa_firmy": "alarmowanie.pl",
+        "adres_firmy": "ul. NIeznajoma 25",
+        "miasto": "Warszawa",
+        "tel_kontaktowy": 567123456,
+        "termin_waznosci": "2021-12-16",
+        "termin_oplaty": "2021-05-10",
+        "kwota": "100.00",
+        "osoba_odpowiedzialna": 2,
+        "uwagi": ""
+    }
+},
+{
+    "model": "department.uslugi",
+    "pk": 2,
+    "fields": {
+        "usluga": "Test",
+        "nazwa_firmy": "Testowa",
+        "adres_firmy": "ul. Nowa 1",
+        "miasto": "Kraków",
+        "tel_kontaktowy": 555987123,
+        "termin_waznosci": "2021-05-30",
+        "termin_oplaty": "2021-07-16",
+        "kwota": "299.00",
+        "osoba_odpowiedzialna": 2,
+        "uwagi": ""
     }
 }
 ]

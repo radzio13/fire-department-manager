@@ -20,20 +20,20 @@
     </thead>
     <tbody>
     {% for firefighter in strazacy %}
-    {% if firefighter.is_past_due_medical or firefighter.is_past_due_insurance %}
+    {% if firefighter.is_soon_past_due_medical and not firefighter.is_past_due_medical or firefighter.is_soon_past_due_insurance and not firefighter.is_past_due_insurance %}
       <tr>
         <td><a href="{% url 'firefighter-detail' firefighter.pk %}">{{ firefighter.pk }}</a></td>
         <td>{{ firefighter.user.first_name }} {{ firefighter.user.last_name }}</td>
         <td>{{ firefighter.data_urodzenia }}</td>
         <td>{{ firefighter.data_wstapienia }}</td>
         <td>{{ firefighter.ostatnie_badanie }}</td>
-        {% if firefighter.is_past_due_medical %}
-        	<td style="color:red">{{ firefighter.nastepne_badanie }}</td>
+        {% if firefighter.is_soon_past_due_medical %}
+        	<td style="color:orange">{{ firefighter.nastepne_badanie }}</td>
         {% else %}
         	<td>{{ firefighter.nastepne_badanie }}</td>
         {% endif %}
-        {% if firefighter.is_past_due_insurance %}
-        	<td style="color:red">{{ firefighter.ubezpieczenie }}</td>
+        {% if firefighter.is_soon_past_due_insurance %}
+        	<td style="color:orange">{{ firefighter.ubezpieczenie }}</td>
         {% else %}
         	<td>{{ firefighter.ubezpieczenie }}</td>
         {% endif %}

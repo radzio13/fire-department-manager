@@ -18,7 +18,7 @@
     </thead>
     <tbody>
     {% for service in uslugi%}
-    {% if service.is_past_due_validity or service.is_past_due_payment %}
+    {% if service.is_soon_past_due_validity and not service.is_past_due_validity or service.is_soon_past_due_payment and not service.is_past_due_payment %}
     <tr>
       <td><a href="{% url 'service-detail' service.pk %}">{{ service.pk }}</a></td>
       <td>{{service.usluga}}</td>
@@ -26,13 +26,13 @@
       <td>{{service.adres_firmy}}</td>
       <td>{{service.miasto}}</td>
       <td>{{service.tel_kontaktowy}}</td>
-      {% if service.is_past_due_validity %}
-      <td style="color:red">{{service.termin_waznosci}}</td>
+      {% if service.is_soon_past_due_validity %}
+      <td style="color:orange">{{service.termin_waznosci}}</td>
       {% else %}
       	<td>{{service.termin_waznosci}}</td>
       {% endif %}      
-      {% if service.is_past_due_payment %}
-      <td style="color:red">{{service.termin_oplaty}}</td>
+      {% if service.is_soon_past_due_payment %}
+      <td style="color:orange">{{service.termin_oplaty}}</td>
       {% else %}
       <td>{{service.termin_oplaty}}</td>
       {% endif %}

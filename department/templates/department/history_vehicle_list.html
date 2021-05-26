@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <p class="pull-right"><a class="action-primary" href="{% url 'history-vehicle-create' %}">Dodaj nowy</a></p>
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Pojazd</th>
+      <th>Ostatni przegląd</th>
+      <th>Następny przegląd</th>
+      <th>Ostatnia wymiana oleju i filtra</th>
+      <th>Przebieg przy wymianie</th>
+      <th>Mechanik</th>
+      <th>Uwagi</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for history_vehicle in object_list%}
+    <tr>
+      <td><a href="{% url 'history-vehicle-detail' history_vehicle.pk %}">{{ history_vehicle.pk }}</a></td>
+      <td>{{history_vehicle.pojazd}}</td>
+      <td>{{history_vehicle.ostatni_przeglad}}</td>
+      <td>{{history_vehicle.nastepny_przeglad}}</td>
+      <td>{{history_vehicle.ostatnia_wymiana_olej_filtr}}</td>
+      <td>{{history_vehicle.przebieg_przywymianie}}</td>
+      <td>{{history_vehicle.mechanik}}</td>
+      <td>{{history_vehicle.uwagi}}</td>
+    {% endfor%}
+    </tbody>
+  </table>
+{% endblock content %}

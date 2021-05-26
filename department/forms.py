@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 
-from department.models import Strazacy, Pojazdy, Uslugi, Sprzet
+from department.models import Strazacy, Pojazdy, Uslugi, Sprzet, PrzegladSprzet, PrzegladPojazdy
 
 
 class FirefighterUpdateForm(forms.ModelForm):
@@ -88,4 +88,25 @@ class EquipmentCreateForm(forms.ModelForm):
 	class Meta:
 		model = Sprzet
 		fields = ('nazwa', 'marka', 'model', 'parametry', 'rok_prod', 'status', 'stan', 'uwagi',)
+		
+class HistoryEquipmentUpdateForm(forms.ModelForm):
 
+	class Meta:
+		model = PrzegladSprzet
+		fields = ('sprzet', 'ostatni_przeglad', 'nastepny_przeglad', 'mechanik', 'uwagi',)
+		
+	def __init__(self, *args, **kwargs):
+		super().__init__(*args, **kwargs)
+
+
+class HistoryEquipmentCreateForm(forms.ModelForm):
+	
+	class Meta:
+		model = PrzegladSprzet
+		fields = ('sprzet', 'ostatni_przeglad', 'nastepny_przeglad', 'mechanik', 'uwagi')
+
+class HistoryVehicleCreateForm(forms.ModelForm):
+
+    class Meta:
+        model = PrzegladPojazdy
+        fields = '__all__'

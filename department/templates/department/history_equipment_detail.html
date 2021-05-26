@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="confirm-form">
+    <a href="{{ go_back }}">Powrót</a>
+    <p>
+      <span class="field-name">ID:</span>
+      <span class="field-value">{{ object.id }}</span>
+    </p>
+    <p>
+      <span class="field-name">Nazwa:</span>
+      <span class="field-value">{{ object.sprzet }}</span>
+    </p>
+    <p>
+      <span class="field-name">Ostatni przegląd:</span>
+      <span class="field-value">{{ object.ostatni_przeglad }}</span>
+    </p>
+    <p>
+      <span class="field-name">Następny przegląd:</span>
+      <span class="field-value">{{ object.nastepny_przeglad }}</span>
+    </p>
+    <p>
+      <span class="field-name">Mechanik:</span>
+      <span class="field-value">{{ object.mechanik }}</span>
+    </p>
+
+    <p>
+      <span class="field-name">Uwagi:</span>
+      <span class="field-value">{{ object.uwagi | default:'-' }}</span>
+    </p>
+    <div class="pull-right">
+      <a class="action-secondary" href="{% url 'history-equipment-delete' object.pk %}">Usuń</a>
+      <a class="action-primary" href="{% url 'history-equipment-update' object.pk %}">Edytuj</a>
+    </div>
+  </div>
+{% endblock content %}

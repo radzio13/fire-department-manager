@@ -791,7 +791,7 @@
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$260000$9nVs5kmMx2FBUOZywFP5Ds$qluJCQJ0hCNq125w88F8P1LQLJBGpqH5IvKaxYgKBL4=",
-        "last_login": "2021-05-16T18:58:08.361Z",
+        "last_login": "2021-05-28T17:40:58.190Z",
         "is_superuser": true,
         "username": "admin",
         "first_name": "",
@@ -861,6 +861,150 @@
     }
 },
 {
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$IOoUEuQoaEoJqoxwcqpldJ$MCODFy27XZgevQHqx6e6qm4DBze8sBL9/vdVSpqZZz0=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "pkowalski",
+        "first_name": "Piotr",
+        "last_name": "Kowalski",
+        "email": "pkowalski@o2.pl",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-05-28T16:50:57.040Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$vPnsfis7a3WY2gCEILlrjU$4d12lpkoTKDDPp8WsYpmERxZrDYTAj+CYGk9kemehqU=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "apych",
+        "first_name": "Andrzej",
+        "last_name": "Pych",
+        "email": "apych@o2.pl",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-05-28T18:22:43.548Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 7,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$769DaIaR0sLMteAQ0q6DEe$TXi7w6Ko6ZooQzddWi6xVa1kTbXn2pVgg7lIzlmEFqE=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mlukasiak",
+        "first_name": "Maciej",
+        "last_name": "Łukasiak",
+        "email": "mlukasiak123@wp.pl",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-05-28T18:24:39.846Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 8,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$hHOCHgQul93qYuKhzCTIng$/4X41f7GtpBzx302nZqhr41RvbmwQbOv14RJsnsjcks=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "msiekiera",
+        "first_name": "Michał",
+        "last_name": "Siekiera",
+        "email": "msiekiera5@wp.pl",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-05-28T18:26:22.996Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 9,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$qicMg8uPZQwMH2tw9DyzoH$8nQWteyThae88WBEMt+ytJOyhNtpEfhEWHiete0bsk4=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "bwojcik",
+        "first_name": "Bogdan",
+        "last_name": "Wójcik",
+        "email": "wojcikbog@o2.pl",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-05-28T18:39:33.948Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 10,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$aEo3gVIfp8o9wi8ZphDDQR$moadv6oH9mH441OPdCJJl0W5hMkVFVPoqk7iMXLbBMY=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jostrowska",
+        "first_name": "Joanna",
+        "last_name": "Ostrowska",
+        "email": "joannaos1@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-05-28T18:41:49.480Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 11,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$JLc7GYXNSx8inEhaEnejAn$feB24HwRPeMznBAyRG29PaNnd3hX9HDaI8manG34sqs=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "smazur",
+        "first_name": "Szymon",
+        "last_name": "Mazur",
+        "email": "szymonek123@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-05-28T18:44:02.100Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 12,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$MjKofihvb3mzo7elxAXq6Q$Ye1I/Fo45wwhy92O5JvUlYalInWd/ZuG9DkgrboLU+I=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "kzalewski",
+        "first_name": "Krzysztof",
+        "last_name": "Zalewski",
+        "email": "kzalewski998@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-05-28T18:45:41.342Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
     "model": "department.sprzet",
     "pk": 1,
     "fields": {
@@ -889,6 +1033,76 @@
     }
 },
 {
+    "model": "department.sprzet",
+    "pk": 3,
+    "fields": {
+        "nazwa": "Narzędzie typu KOMBI - nożyco-rozpieracz",
+        "marka": "Lukas",
+        "model": "SC 250 M",
+        "parametry": "Siła rozpierania min.31 kN, minimalna odległość rozpierania 308 mm",
+        "rok_prod": 2018,
+        "status": "W podziale",
+        "stan": "Sprawny",
+        "uwagi": ""
+    }
+},
+{
+    "model": "department.sprzet",
+    "pk": 4,
+    "fields": {
+        "nazwa": "Zestaw do wyważania drzwi i cięcia pedałów",
+        "marka": "Lukas",
+        "model": "HTS 90/LSH4",
+        "parametry": "Siła cięcia 75 kN, siła rozpierania 90 kN, skok: 100 mm",
+        "rok_prod": 2018,
+        "status": "W podziale",
+        "stan": "Sprawny",
+        "uwagi": ""
+    }
+},
+{
+    "model": "department.sprzet",
+    "pk": 5,
+    "fields": {
+        "nazwa": "Agregat hydrauliczny",
+        "marka": "Lukas",
+        "model": "P 630 SG",
+        "parametry": "Maksymalne ciśnienie robocze 700 bar",
+        "rok_prod": 2018,
+        "status": "W podziale",
+        "stan": "Sprawny",
+        "uwagi": ""
+    }
+},
+{
+    "model": "department.sprzet",
+    "pk": 6,
+    "fields": {
+        "nazwa": "Piła spalinowa",
+        "marka": "Stihl",
+        "model": "MS 362 C-M",
+        "parametry": "Moc 3,5 kW",
+        "rok_prod": 2016,
+        "status": "W podziale",
+        "stan": "Sprawny",
+        "uwagi": ""
+    }
+},
+{
+    "model": "department.sprzet",
+    "pk": 7,
+    "fields": {
+        "nazwa": "Aparat powietrzny",
+        "marka": "MSA",
+        "model": "AirGoFIX",
+        "parametry": "Butla powietrzna stalowa 6l/300bar z zaworem",
+        "rok_prod": 2015,
+        "status": "W podziale",
+        "stan": "Sprawny",
+        "uwagi": "4 szt"
+    }
+},
+{
     "model": "department.strazacy",
     "pk": 2,
     "fields": {
@@ -896,7 +1110,7 @@
         "data_wstapienia": "2001-01-12",
         "ostatnie_badanie": "2020-02-07",
         "nastepne_badanie": "2023-02-07",
-        "ubezpieczenie": "2021-05-20",
+        "ubezpieczenie": "2021-06-20",
         "kierowca": true,
         "termin_prawa_jazdy": "2035-05-17",
         "termin_wkladki": "2023-11-29",
@@ -910,16 +1124,160 @@
     "model": "department.strazacy",
     "pk": 4,
     "fields": {
-        "data_urodzenia": "1980-05-13",
-        "data_wstapienia": "2000-03-22",
-        "ostatnie_badanie": "2020-05-12",
-        "nastepne_badanie": "2021-05-12",
-        "ubezpieczenie": "2022-08-12",
+        "data_urodzenia": "1971-02-13",
+        "data_wstapienia": "1989-03-20",
+        "ostatnie_badanie": "2019-09-19",
+        "nastepne_badanie": "2022-09-19",
+        "ubezpieczenie": "2021-12-31",
         "kierowca": true,
-        "termin_prawa_jazdy": "2022-08-12",
-        "termin_wkladki": "2022-08-12",
-        "termin_kpp": "2022-05-19",
-        "ostatnia_skladka": 2021,
+        "termin_prawa_jazdy": "2030-10-17",
+        "termin_wkladki": "2025-10-20",
+        "termin_kpp": "2021-11-08",
+        "ostatnia_skladka": 2020,
+        "status": "Aktywny",
+        "uwagi": ""
+    }
+},
+{
+    "model": "department.strazacy",
+    "pk": 5,
+    "fields": {
+        "data_urodzenia": "1994-03-03",
+        "data_wstapienia": "2013-04-14",
+        "ostatnie_badanie": "2019-09-19",
+        "nastepne_badanie": "2022-09-19",
+        "ubezpieczenie": "2021-12-31",
+        "kierowca": false,
+        "termin_prawa_jazdy": null,
+        "termin_wkladki": null,
+        "termin_kpp": "2022-05-21",
+        "ostatnia_skladka": 2020,
+        "status": "Aktywny",
+        "uwagi": ""
+    }
+},
+{
+    "model": "department.strazacy",
+    "pk": 6,
+    "fields": {
+        "data_urodzenia": "1966-12-26",
+        "data_wstapienia": "1985-11-17",
+        "ostatnie_badanie": "2017-03-02",
+        "nastepne_badanie": "2020-03-02",
+        "ubezpieczenie": "2021-06-20",
+        "kierowca": false,
+        "termin_prawa_jazdy": null,
+        "termin_wkladki": null,
+        "termin_kpp": null,
+        "ostatnia_skladka": 2019,
+        "status": "Nieaktywny",
+        "uwagi": "Brak badań lekarskich"
+    }
+},
+{
+    "model": "department.strazacy",
+    "pk": 7,
+    "fields": {
+        "data_urodzenia": "1990-08-15",
+        "data_wstapienia": "2006-09-25",
+        "ostatnie_badanie": "2019-09-19",
+        "nastepne_badanie": "2022-09-19",
+        "ubezpieczenie": "2021-12-31",
+        "kierowca": false,
+        "termin_prawa_jazdy": null,
+        "termin_wkladki": null,
+        "termin_kpp": "2022-05-21",
+        "ostatnia_skladka": 2020,
+        "status": "Aktywny",
+        "uwagi": ""
+    }
+},
+{
+    "model": "department.strazacy",
+    "pk": 8,
+    "fields": {
+        "data_urodzenia": "1977-04-21",
+        "data_wstapienia": "1998-07-03",
+        "ostatnie_badanie": "2020-02-07",
+        "nastepne_badanie": "2023-02-07",
+        "ubezpieczenie": "2021-06-20",
+        "kierowca": false,
+        "termin_prawa_jazdy": null,
+        "termin_wkladki": null,
+        "termin_kpp": null,
+        "ostatnia_skladka": 2020,
+        "status": "Aktywny",
+        "uwagi": ""
+    }
+},
+{
+    "model": "department.strazacy",
+    "pk": 9,
+    "fields": {
+        "data_urodzenia": "1982-05-30",
+        "data_wstapienia": "2002-12-11",
+        "ostatnie_badanie": "2018-05-25",
+        "nastepne_badanie": "2021-05-25",
+        "ubezpieczenie": "2021-12-31",
+        "kierowca": true,
+        "termin_prawa_jazdy": "2028-06-06",
+        "termin_wkladki": "2024-03-19",
+        "termin_kpp": "2021-05-09",
+        "ostatnia_skladka": 2020,
+        "status": "Aktywny",
+        "uwagi": ""
+    }
+},
+{
+    "model": "department.strazacy",
+    "pk": 10,
+    "fields": {
+        "data_urodzenia": "1992-12-24",
+        "data_wstapienia": "2011-02-15",
+        "ostatnie_badanie": "2019-09-19",
+        "nastepne_badanie": "2022-09-19",
+        "ubezpieczenie": "2021-06-20",
+        "kierowca": false,
+        "termin_prawa_jazdy": null,
+        "termin_wkladki": null,
+        "termin_kpp": "2021-05-09",
+        "ostatnia_skladka": 2020,
+        "status": "Aktywny",
+        "uwagi": ""
+    }
+},
+{
+    "model": "department.strazacy",
+    "pk": 11,
+    "fields": {
+        "data_urodzenia": "1985-04-07",
+        "data_wstapienia": "2003-03-31",
+        "ostatnie_badanie": "2018-05-25",
+        "nastepne_badanie": "2021-05-25",
+        "ubezpieczenie": "2021-12-31",
+        "kierowca": false,
+        "termin_prawa_jazdy": null,
+        "termin_wkladki": null,
+        "termin_kpp": "2023-01-15",
+        "ostatnia_skladka": 2020,
+        "status": "Aktywny",
+        "uwagi": ""
+    }
+},
+{
+    "model": "department.strazacy",
+    "pk": 12,
+    "fields": {
+        "data_urodzenia": "2001-06-13",
+        "data_wstapienia": "2019-07-20",
+        "ostatnie_badanie": "2019-09-15",
+        "nastepne_badanie": "2022-09-15",
+        "ubezpieczenie": "2021-12-31",
+        "kierowca": false,
+        "termin_prawa_jazdy": null,
+        "termin_wkladki": null,
+        "termin_kpp": null,
+        "ostatnia_skladka": 2020,
         "status": "Aktywny",
         "uwagi": ""
     }
@@ -930,10 +1288,10 @@
     "fields": {
         "marka": "MAN",
         "model": "TGM 13.290",
-        "typ": "W0 LIW 20/11/2020 20/11/2021 2",
+        "typ": "GBA 3.5/16",
         "numer_rej": "W0 LIW",
-        "ubezpieczenie": "2021-04-30",
-        "ostatni_wyjazd": "2021-04-19",
+        "ubezpieczenie": "2021-12-28",
+        "ostatni_wyjazd": "2021-03-25",
         "status": "W podziale",
         "stan": "Sprawny",
         "uwagi": ""
@@ -947,8 +1305,8 @@
         "model": "14.225",
         "typ": "GBA 2/27",
         "numer_rej": "WWE J462",
-        "ubezpieczenie": "2021-05-13",
-        "ostatni_wyjazd": "2021-04-12",
+        "ubezpieczenie": "2021-05-09",
+        "ostatni_wyjazd": "2021-03-02",
         "status": "W podziale",
         "stan": "Sprawny",
         "uwagi": ""
@@ -962,8 +1320,8 @@
         "model": "208D",
         "typ": "SLKw",
         "numer_rej": "WWE 54AT",
-        "ubezpieczenie": "2021-07-20",
-        "ostatni_wyjazd": "2021-04-06",
+        "ubezpieczenie": "2022-01-20",
+        "ostatni_wyjazd": "2021-03-24",
         "status": "W podziale",
         "stan": "Sprawny",
         "uwagi": ""
@@ -971,25 +1329,51 @@
 },
 {
     "model": "department.przegladpojazdy",
-    "pk": 1,
+    "pk": 4,
     "fields": {
-        "ostatni_przeglad": "2020-05-16",
-        "nastepny_przeglad": "2021-04-16",
-        "ostatnia_wymiana_olej_filtr": "2021-05-16",
-        "przebieg_przywymianie": 2512,
-        "mechanik": 2,
+        "ostatni_przeglad": "2019-11-20",
+        "nastepny_przeglad": "2020-11-20",
+        "ostatnia_wymiana_olej_filtr": "2019-03-02",
+        "przebieg_przywymianie": 1929,
+        "mechanik": 4,
         "uwagi": "",
         "pojazd": 1
     }
 },
 {
     "model": "department.przegladpojazdy",
-    "pk": 2,
+    "pk": 5,
     "fields": {
-        "ostatni_przeglad": "2021-05-16",
-        "nastepny_przeglad": "2021-05-28",
-        "ostatnia_wymiana_olej_filtr": "2021-05-16",
-        "przebieg_przywymianie": 53212,
+        "ostatni_przeglad": "2019-02-12",
+        "nastepny_przeglad": "2020-02-12",
+        "ostatnia_wymiana_olej_filtr": "2019-02-20",
+        "przebieg_przywymianie": 45262,
+        "mechanik": 4,
+        "uwagi": "",
+        "pojazd": 2
+    }
+},
+{
+    "model": "department.przegladpojazdy",
+    "pk": 6,
+    "fields": {
+        "ostatni_przeglad": "2020-02-12",
+        "nastepny_przeglad": "2021-02-12",
+        "ostatnia_wymiana_olej_filtr": "2020-03-20",
+        "przebieg_przywymianie": 50126,
+        "mechanik": 2,
+        "uwagi": "",
+        "pojazd": 2
+    }
+},
+{
+    "model": "department.przegladpojazdy",
+    "pk": 7,
+    "fields": {
+        "ostatni_przeglad": "2019-06-15",
+        "nastepny_przeglad": "2020-06-15",
+        "ostatnia_wymiana_olej_filtr": "2019-06-15",
+        "przebieg_przywymianie": 85235,
         "mechanik": 2,
         "uwagi": "",
         "pojazd": 3
@@ -997,23 +1381,49 @@
 },
 {
     "model": "department.przegladpojazdy",
-    "pk": 3,
+    "pk": 8,
     "fields": {
-        "ostatni_przeglad": "2021-05-16",
-        "nastepny_przeglad": "2021-12-16",
-        "ostatnia_wymiana_olej_filtr": "2021-05-16",
-        "przebieg_przywymianie": 32001,
+        "ostatni_przeglad": "2020-11-20",
+        "nastepny_przeglad": "2021-11-20",
+        "ostatnia_wymiana_olej_filtr": "2020-07-05",
+        "przebieg_przywymianie": 2546,
+        "mechanik": 4,
+        "uwagi": "",
+        "pojazd": 1
+    }
+},
+{
+    "model": "department.przegladpojazdy",
+    "pk": 9,
+    "fields": {
+        "ostatni_przeglad": "2021-02-12",
+        "nastepny_przeglad": "2022-02-12",
+        "ostatnia_wymiana_olej_filtr": "2020-02-25",
+        "przebieg_przywymianie": 56124,
         "mechanik": 2,
         "uwagi": "",
         "pojazd": 2
     }
 },
 {
+    "model": "department.przegladpojazdy",
+    "pk": 10,
+    "fields": {
+        "ostatni_przeglad": "2020-06-15",
+        "nastepny_przeglad": "2021-06-15",
+        "ostatnia_wymiana_olej_filtr": "2020-06-11",
+        "przebieg_przywymianie": 95421,
+        "mechanik": 2,
+        "uwagi": "",
+        "pojazd": 3
+    }
+},
+{
     "model": "department.przegladsprzet",
-    "pk": 1,
+    "pk": 3,
     "fields": {
         "ostatni_przeglad": "2021-02-19",
-        "nastepny_przeglad": "2021-06-12",
+        "nastepny_przeglad": "2021-08-19",
         "mechanik": 2,
         "uwagi": "",
         "sprzet": 1
@@ -1021,13 +1431,79 @@
 },
 {
     "model": "department.przegladsprzet",
-    "pk": 2,
+    "pk": 4,
     "fields": {
         "ostatni_przeglad": "2021-02-19",
-        "nastepny_przeglad": "2021-04-19",
+        "nastepny_przeglad": "2021-08-19",
         "mechanik": 2,
         "uwagi": "",
         "sprzet": 2
+    }
+},
+{
+    "model": "department.przegladsprzet",
+    "pk": 5,
+    "fields": {
+        "ostatni_przeglad": "2021-03-05",
+        "nastepny_przeglad": "2022-03-05",
+        "mechanik": 4,
+        "uwagi": "",
+        "sprzet": 3
+    }
+},
+{
+    "model": "department.przegladsprzet",
+    "pk": 6,
+    "fields": {
+        "ostatni_przeglad": "2021-03-05",
+        "nastepny_przeglad": "2022-03-05",
+        "mechanik": 4,
+        "uwagi": "",
+        "sprzet": 4
+    }
+},
+{
+    "model": "department.przegladsprzet",
+    "pk": 7,
+    "fields": {
+        "ostatni_przeglad": "2021-03-05",
+        "nastepny_przeglad": "2022-03-05",
+        "mechanik": 4,
+        "uwagi": "",
+        "sprzet": 5
+    }
+},
+{
+    "model": "department.przegladsprzet",
+    "pk": 8,
+    "fields": {
+        "ostatni_przeglad": "2020-09-11",
+        "nastepny_przeglad": "2021-02-11",
+        "mechanik": 2,
+        "uwagi": "",
+        "sprzet": 6
+    }
+},
+{
+    "model": "department.przegladsprzet",
+    "pk": 9,
+    "fields": {
+        "ostatni_przeglad": "2021-02-19",
+        "nastepny_przeglad": "2021-06-19",
+        "mechanik": 2,
+        "uwagi": "",
+        "sprzet": 6
+    }
+},
+{
+    "model": "department.przegladsprzet",
+    "pk": 10,
+    "fields": {
+        "ostatni_przeglad": "2020-11-25",
+        "nastepny_przeglad": "2021-05-25",
+        "mechanik": 4,
+        "uwagi": "",
+        "sprzet": 7
     }
 },
 {
@@ -1036,12 +1512,12 @@
     "fields": {
         "usluga": "Alarmowanie",
         "nazwa_firmy": "alarmowanie.pl",
-        "adres_firmy": "ul. NIeznajoma 25",
-        "miasto": "Warszawa",
-        "tel_kontaktowy": 567123456,
-        "termin_waznosci": "2021-12-16",
-        "termin_oplaty": "2021-05-10",
-        "kwota": "100.00",
+        "adres_firmy": "ul. Elbląska 14a",
+        "miasto": "Iława",
+        "tel_kontaktowy": 786818640,
+        "termin_waznosci": "2021-12-31",
+        "termin_oplaty": "2021-06-30",
+        "kwota": "240.00",
         "osoba_odpowiedzialna": 2,
         "uwagi": ""
     }
@@ -1050,16 +1526,16 @@
     "model": "department.uslugi",
     "pk": 2,
     "fields": {
-        "usluga": "Test",
-        "nazwa_firmy": "Testowa",
+        "usluga": "Karta SIM",
+        "nazwa_firmy": "PLAY",
         "adres_firmy": "ul. Nowa 1",
-        "miasto": "Kraków",
-        "tel_kontaktowy": 555987123,
-        "termin_waznosci": "2021-05-30",
-        "termin_oplaty": "2021-07-16",
-        "kwota": "299.00",
+        "miasto": "Warszawa",
+        "tel_kontaktowy": 511101243,
+        "termin_waznosci": "2022-05-10",
+        "termin_oplaty": "2021-05-05",
+        "kwota": "10.00",
         "osoba_odpowiedzialna": 2,
-        "uwagi": ""
+        "uwagi": "Płatność co miesiąc"
     }
 }
 ]

@@ -15,7 +15,6 @@
       <th>Termin kpp</th>
       <th>Ostatnia składka</th>
       <th>Status</th>
-      <th>Uwagi</th>
     </tr>
     </thead>
     <tbody>
@@ -42,7 +41,6 @@
         <td>{{ firefighter.termin_kpp| default_if_none:"-" }}</td>
         <td>{{ firefighter.ostatnia_skladka }}</td>
         <td>{{ firefighter.status }}</td>
-        <td>{{ firefighter.uwagi }}</td>
       </tr>
     {% endif %}
     {% endfor %}

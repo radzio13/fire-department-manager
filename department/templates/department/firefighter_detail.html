@@ -41,11 +41,11 @@
     </p>
     <p>
       <span class="field-name">Prawo jazdy:</span>
-      <span class="field-value">{{ object.termin_prawa_jazdy }}</span>
+      <span class="field-value">{{ object.termin_prawa_jazdy | default:'-' }}</span>
     </p>
     <p>
       <span class="field-name">Termin wkładki:</span>
-      <span class="field-value">{{ object.termin_wkladki }}</span>
+      <span class="field-value">{{ object.termin_wkladki | default:'-' }}</span>
     </p>
     <p>
       <span class="field-name">Termin kpp:</span>

@@ -1,0 +1,44 @@
+<h2>Sprzęt</h2>
+
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nazwa</th>
+      <th>Marka</th>
+      <th>Model</th>
+      <th>Parametry</th>
+      <th>Rok produkcji</th>
+      <th>Ostatni przegląd</th>
+      <th>Następny przegląd</th>
+      <th>Mechanik</th>
+      <th>Status</th>
+      <th>Stan</th>
+      <th>Uwagi</th>
+    </tr>
+    </thead>
+    {% for equipment in sprzet %}
+    {% if equipment.przeglad_sprzet.last.is_past_due %}
+    <tbody>
+       <tr>
+        <td><a href="{% url 'equipment-detail' equipment.pk %}">{{ equipment.pk }}</a></td>
+        <td>{{ equipment.nazwa }}</td>
+        <td>{{ equipment.marka }}</td>
+        <td>{{ equipment.model }}</td>
+        <td>{{ equipment.parametry }}</td>
+        <td>{{ equipment.rok_prod }}</td>
+        <td>{{ equipment.przeglad_sprzet.last.ostatni_przeglad }}</td>
+        {% if equipment.przeglad_sprzet.last.is_past_due %}
+        <td style="color:red">{{ equipment.przeglad_sprzet.last.nastepny_przeglad }}</td>
+        {% else %}
+        <td>{{ equipment.przeglad_sprzet.last.nastepny_przeglad }}</td>
+        {% endif %}      
+        <td>{{ equipment.przeglad_sprzet.last.mechanik }}        </td>
+        <td>{{ equipment.status }}</td>
+        <td>{{ equipment.stan }}</td>
+        <td>{{ equipment.uwagi }}</td>
+      </tr>
+    {% endif %}
+    {% endfor %}
+    </tbody>
+  </table>

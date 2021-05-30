@@ -3,7 +3,7 @@ from enum import auto, Enum
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import User
 from django.db import models
-
+from datetime import date, timedelta
 
 class Sprzet(models.Model):
     nazwa = models.CharField(max_length=300)
@@ -30,9 +30,9 @@ class Strazacy(models.Model):
     ostatnie_badanie = models.DateField()
     nastepne_badanie = models.DateField()
     ubezpieczenie = models.DateField()
-    kierowca = models.BooleanField(default=False)
-    termin_prawa_jazdy = models.DateField(blank=True)
-    termin_wkladki = models.DateField(blank=True)
+    kierowca = models.BooleanField(default=False,blank=True)
+    termin_prawa_jazdy = models.DateField(blank=True, null=True)
+    termin_wkladki = models.DateField(blank=True, null=True)
     termin_kpp = models.DateField(blank=True, null=True)
     ostatnia_skladka = models.PositiveIntegerField()
     status = models.CharField(max_length=50)
@@ -41,6 +41,17 @@ class Strazacy(models.Model):
     def __str__(self):
         return f"{self.user.first_name} {self.user.last_name}"
 
+    def is_past_due_medical(self):
+    	return date.today() > self.nastepne_badanie
+
+    def is_past_due_insurance(self):
+    	return date.today() > self.ubezpieczenie
+
+    def is_soon_past_due_medical(self):
+    	return date.today() > (self.nastepne_badanie - timedelta(days=30))
+
+    def is_soon_past_due_insurance (self):
+    	return date.today() > (self.ubezpieczenie - timedelta(days=30))
 
 class Pojazdy(models.Model):
     marka = models.CharField(max_length=50)
@@ -56,6 +67,12 @@ class Pojazdy(models.Model):
     def __str__(self):
         return f"{self.marka}, {self.model}, {self.numer_rej}"
 
+    def is_past_due(self):
+    	return date.today() > self.ubezpieczenie
+
+    def is_soon_past_due(self):
+    	return date.today() > (self.ubezpieczenie - timedelta(days=30))
+
 
 class PrzegladPojazdy(models.Model):
     ostatni_przeglad = models.DateField()
@@ -69,6 +86,12 @@ class PrzegladPojazdy(models.Model):
     def __str__(self):
         return f"{self.pojazd} ({self.ostatni_przeglad} - {self.nastepny_przeglad})"
 
+    def is_past_due(self):
+    	return date.today() > self.nastepny_przeglad
+
+    def is_soon_past_due(self):
+    	return date.today() > (self.nastepny_przeglad - timedelta(days=30))
+
 
 class PrzegladSprzet(models.Model):
     ostatni_przeglad = models.DateField()
@@ -79,6 +102,12 @@ class PrzegladSprzet(models.Model):
 
     def __str__(self):
         return f"{self.sprzet} ({self.ostatni_przeglad} - {self.nastepny_przeglad})"
+
+    def is_past_due(self):
+    	return date.today() > self.nastepny_przeglad
+
+    def is_soon_past_due(self):
+    	return date.today() > (self.nastepny_przeglad - timedelta(days=30))
 
 
 class Uslugi(models.Model):
@@ -95,6 +124,18 @@ class Uslugi(models.Model):
 
     def __str__(self):
         return f"{self.usluga}, {self.nazwa_firmy}, {self.adres_firmy}"
+
+    def is_past_due_validity(self):
+    	return date.today() > self.termin_waznosci
+
+    def is_past_due_payment(self):
+    	return date.today() > self.termin_oplaty
+
+    def is_soon_past_due_validity(self):
+    	return date.today() > (self.termin_waznosci - timedelta(days=30))
+
+    def is_soon_past_due_payment(self):
+    	return date.today() > (self.termin_oplaty - timedelta(days=30))
 
 
 class Uwaga(models.Model):

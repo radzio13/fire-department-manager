@@ -33,8 +33,8 @@
           {{ firefighter.ostatnie_badanie }} - {{ firefighter.nastepne_badanie }}
         </td>
         <td title="{{ firefighter.ubezpieczenie }}">{{ firefighter.ubezpieczenie }}</td>
-        <td title="{{ firefighter.termin_prawa_jazdy }}">{{ firefighter.termin_prawa_jazdy }}</td>
-        <td title="{{ firefighter.termin_wkladki }}">{{ firefighter.termin_wkladki }}</td>
+        <td title="{{ firefighter.termin_prawa_jazdy }}">{{ firefighter.termin_prawa_jazdy | default_if_none:"-"}}</td>
+        <td title="{{ firefighter.termin_wkladki }}">{{ firefighter.termin_wkladki | default_if_none:"-"}}</td>
         <td title="{{ firefighter.termin_kpp }}">{{ firefighter.termin_kpp| default_if_none:"-" }}</td>
         <td title="{{ firefighter.ostatnia_skladka }}">{{ firefighter.ostatnia_skladka }}</td>
         <td title="{{ firefighter.status }}">{{ firefighter.status }}</td>

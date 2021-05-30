@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <p class="pull-right"><a class="action-primary" href="{% url 'history-equipment-create' %}">Dodaj nowy</a></p>
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Sprzęt</th>
+      <th>Ostatni przegląd</th>
+      <th>Następny przegląd</th>
+      <th>Mechanik</th>
+      <th>Uwagi</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for history_equipment in object_list %}
+      <tr>
+        <td title="{{ history_equipment.pk }}">
+          <a href="{% url 'history-equipment-detail' history_equipment.pk %}">{{ history_equipment.pk }}</a>
+        </td>
+         <td title="{{ history_equipment.sprzet }}">
+          {{ history_equipment.sprzet }}
+        </td>
+        <td title="{{ history_equipment.ostatni_przeglad }}">
+          {{ history_equipment.ostatni_przeglad }}
+        </td>
+        <td title="{{ history_equipment.nastepny_przeglad }}">
+          {{ history_equipment.nastepny_przeglad }}
+        </td>
+        <td title="{{ history_equipment.mechanik }}">
+          {{ history_equipment.mechanik }}
+        </td>
+        <td title="{{ history_equipment.uwagi }}">
+          {{ history_equipment.uwagi }}
+        </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+{% endblock content %}

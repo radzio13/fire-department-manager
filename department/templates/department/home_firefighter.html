@@ -1,0 +1,48 @@
+ <h2>Strażacy</h2>
+
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Imie i nazwisko</th>
+      <th>Data urodzenia</th>
+      <th>Data wstąpienia</th>
+      <th>Ostatnie badanie</th>
+      <th>Następne badanie</th>
+      <th>Ubezpieczenie</th>
+      <th>Prawo jazdy</th>
+      <th>Termin wkładki</th>
+      <th>Termin kpp</th>
+      <th>Ostatnia składka</th>
+      <th>Status</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for firefighter in strazacy %}
+    {% if firefighter.is_past_due_medical or firefighter.is_past_due_insurance %}
+      <tr>
+        <td><a href="{% url 'firefighter-detail' firefighter.pk %}">{{ firefighter.pk }}</a></td>
+        <td>{{ firefighter.user.first_name }} {{ firefighter.user.last_name }}</td>
+        <td>{{ firefighter.data_urodzenia }}</td>
+        <td>{{ firefighter.data_wstapienia }}</td>
+        <td>{{ firefighter.ostatnie_badanie }}</td>
+        {% if firefighter.is_past_due_medical %}
+        	<td style="color:red">{{ firefighter.nastepne_badanie }}</td>
+        {% else %}
+        	<td>{{ firefighter.nastepne_badanie }}</td>
+        {% endif %}
+        {% if firefighter.is_past_due_insurance %}
+        	<td style="color:red">{{ firefighter.ubezpieczenie }}</td>
+        {% else %}
+        	<td>{{ firefighter.ubezpieczenie }}</td>
+        {% endif %}
+        <td>{{ firefighter.termin_prawa_jazdy }}</td>
+        <td>{{ firefighter.termin_wkladki }}</td>
+        <td>{{ firefighter.termin_kpp| default_if_none:"-" }}</td>
+        <td>{{ firefighter.ostatnia_skladka }}</td>
+        <td>{{ firefighter.status }}</td>
+      </tr>
+    {% endif %}
+    {% endfor %}
+    </tbody>
+  </table>

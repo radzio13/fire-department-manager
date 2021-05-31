@@ -5,6 +5,9 @@ from django.contrib.auth.models import User
 from django.db import models
 from datetime import date, timedelta
 
+from django.urls import resolve, reverse
+
+
 class Sprzet(models.Model):
     nazwa = models.CharField(max_length=300)
     marka = models.CharField(max_length=50)
@@ -155,11 +158,35 @@ class Uwaga(models.Model):
 class UwagaSprzet(Uwaga):
     subject = models.ForeignKey(Sprzet, on_delete=models.CASCADE)
 
+    def get_url(self):
+        return reverse('equipment-detail', args=(self.subject.pk,))
+
 class UwagaStrazacy(Uwaga):
     subject = models.ForeignKey(Strazacy, on_delete=models.CASCADE)
+
+    def get_url(self):
+        return reverse('firefighter-detail', args=(self.subject.pk,))
 
 class UwagaPojazdy(Uwaga):
     subject = models.ForeignKey(Pojazdy, on_delete=models.CASCADE)
 
+    def get_url(self):
+        return reverse('vehicle-detail', args=(self.subject.pk,))
+
 class UwagaUslugi(Uwaga):
     subject = models.ForeignKey(Uslugi, on_delete=models.CASCADE)
+
+    def get_url(self):
+        return reverse('service-detail', args=(self.subject.pk,))
+
+class UwagaPrzegladSprzet(Uwaga):
+    subject = models.ForeignKey(PrzegladSprzet, on_delete=models.CASCADE)
+
+    def get_url(self):
+        return reverse('service-detail', args=(self.subject.pk,))
+
+class UwagaPrzegladPojazdy(Uwaga):
+    subject = models.ForeignKey(PrzegladPojazdy, on_delete=models.CASCADE)
+
+    def get_url(self):
+        return reverse('service-detail', args=(self.subject.pk,))

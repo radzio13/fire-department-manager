@@ -648,6 +648,222 @@
     }
 },
 {
+    "model": "auth.permission",
+    "pk": 73,
+    "fields": {
+        "name": "Can add uwaga przeglad pojazdy",
+        "content_type": 17,
+        "codename": "add_uwagaprzegladpojazdy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 74,
+    "fields": {
+        "name": "Can change uwaga przeglad pojazdy",
+        "content_type": 17,
+        "codename": "change_uwagaprzegladpojazdy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 75,
+    "fields": {
+        "name": "Can delete uwaga przeglad pojazdy",
+        "content_type": 17,
+        "codename": "delete_uwagaprzegladpojazdy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 76,
+    "fields": {
+        "name": "Can view uwaga przeglad pojazdy",
+        "content_type": 17,
+        "codename": "view_uwagaprzegladpojazdy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 77,
+    "fields": {
+        "name": "Can add uwaga pojazdy",
+        "content_type": 16,
+        "codename": "add_uwagapojazdy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 78,
+    "fields": {
+        "name": "Can change uwaga pojazdy",
+        "content_type": 16,
+        "codename": "change_uwagapojazdy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 79,
+    "fields": {
+        "name": "Can delete uwaga pojazdy",
+        "content_type": 16,
+        "codename": "delete_uwagapojazdy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 80,
+    "fields": {
+        "name": "Can view uwaga pojazdy",
+        "content_type": 16,
+        "codename": "view_uwagapojazdy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 81,
+    "fields": {
+        "name": "Can add uwaga przeglad sprzet",
+        "content_type": 18,
+        "codename": "add_uwagaprzegladsprzet"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 82,
+    "fields": {
+        "name": "Can change uwaga przeglad sprzet",
+        "content_type": 18,
+        "codename": "change_uwagaprzegladsprzet"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 83,
+    "fields": {
+        "name": "Can delete uwaga przeglad sprzet",
+        "content_type": 18,
+        "codename": "delete_uwagaprzegladsprzet"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 84,
+    "fields": {
+        "name": "Can view uwaga przeglad sprzet",
+        "content_type": 18,
+        "codename": "view_uwagaprzegladsprzet"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 85,
+    "fields": {
+        "name": "Can add uwaga sprzet",
+        "content_type": 15,
+        "codename": "add_uwagasprzet"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 86,
+    "fields": {
+        "name": "Can change uwaga sprzet",
+        "content_type": 15,
+        "codename": "change_uwagasprzet"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 87,
+    "fields": {
+        "name": "Can delete uwaga sprzet",
+        "content_type": 15,
+        "codename": "delete_uwagasprzet"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 88,
+    "fields": {
+        "name": "Can view uwaga sprzet",
+        "content_type": 15,
+        "codename": "view_uwagasprzet"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 89,
+    "fields": {
+        "name": "Can add uwaga strazacy",
+        "content_type": 14,
+        "codename": "add_uwagastrazacy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 90,
+    "fields": {
+        "name": "Can change uwaga strazacy",
+        "content_type": 14,
+        "codename": "change_uwagastrazacy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 91,
+    "fields": {
+        "name": "Can delete uwaga strazacy",
+        "content_type": 14,
+        "codename": "delete_uwagastrazacy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 92,
+    "fields": {
+        "name": "Can view uwaga strazacy",
+        "content_type": 14,
+        "codename": "view_uwagastrazacy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 93,
+    "fields": {
+        "name": "Can add uwaga uslugi",
+        "content_type": 13,
+        "codename": "add_uwagauslugi"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 94,
+    "fields": {
+        "name": "Can change uwaga uslugi",
+        "content_type": 13,
+        "codename": "change_uwagauslugi"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 95,
+    "fields": {
+        "name": "Can delete uwaga uslugi",
+        "content_type": 13,
+        "codename": "delete_uwagauslugi"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 96,
+    "fields": {
+        "name": "Can view uwaga uslugi",
+        "content_type": 13,
+        "codename": "view_uwagauslugi"
+    }
+},
+{
     "model": "auth.group",
     "pk": 2,
     "fields": {
@@ -791,7 +1007,7 @@
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$260000$9nVs5kmMx2FBUOZywFP5Ds$qluJCQJ0hCNq125w88F8P1LQLJBGpqH5IvKaxYgKBL4=",
-        "last_login": "2021-05-28T17:40:58.190Z",
+        "last_login": "2021-05-31T18:39:01.051Z",
         "is_superuser": true,
         "username": "admin",
         "first_name": "",
@@ -1536,6 +1752,39 @@
         "kwota": "10.00",
         "osoba_odpowiedzialna": 2,
         "uwagi": "Płatność co miesiąc"
+    }
+},
+{
+    "model": "department.uwagasprzet",
+    "pk": 1,
+    "fields": {
+        "content": "Zepsuło się i nie działa",
+        "author": 1,
+        "created_at": "2021-05-31T18:48:34.774Z",
+        "status": 1,
+        "subject": 3
+    }
+},
+{
+    "model": "department.uwagapojazdy",
+    "pk": 1,
+    "fields": {
+        "content": "Za dużo pali :(",
+        "author": 1,
+        "created_at": "2021-05-31T18:49:21.277Z",
+        "status": 1,
+        "subject": 2
+    }
+},
+{
+    "model": "department.uwagaprzegladsprzet",
+    "pk": 1,
+    "fields": {
+        "content": "Błąd w dacie",
+        "author": 1,
+        "created_at": "2021-05-31T19:02:57.956Z",
+        "status": 1,
+        "subject": 6
     }
 }
 ]

@@ -2,6 +2,7 @@
 
 const makeCommentBtn = document.querySelector('.make-comment');
 const commentModalContainer = document.querySelector('#comment-modal');
+const bodyContainer = document.querySelector('body');
 
 const getCookie = (name) => {
   let cookieValue = null;
@@ -20,6 +21,8 @@ const getCookie = (name) => {
 };
 
 (() => {
+  detectModal();
+
   if (makeCommentBtn) {
     const closeModal = commentModalContainer.querySelector('.modal__close');
     const commentForm = commentModalContainer.querySelector('.comment-form');
@@ -56,3 +59,11 @@ const getCookie = (name) => {
     });
   }
 })();
+
+const detectModal = () => {
+  bodyContainer.style.overflow = location.hash ? 'hidden' : null;
+};
+
+window.addEventListener('hashchange', () => {
+  detectModal();
+})

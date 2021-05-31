@@ -21,7 +21,7 @@
   <section>
   {% include 'department/home_firefighter.html' %}
   </section>
-  
+
 <h1>Terminy, które upływają w ciągu 30 dni:</h1>
   <section>
   {% include 'department/home_vehicle_soon.html' %}
@@ -36,6 +36,7 @@
   {% include 'department/home_firefighter_soon.html' %}
   </section>
 {% endif %}
+  {% if request.user.is_authenticated %}
   <h2>Lista zgłoszonych uwag</h2>
 
   <table>
@@ -47,10 +48,10 @@
     </tr>
     </thead>
     <tbody>
-    {% for comment in firefighters %}
+    {% for comment in uwagi %}
       <tr>
         <td title="{{ comment.subject }}">
-          <a href="{% url 'firefighter-detail' comment.subject.pk %}">{{ comment.subject }}</a>
+          <a href="{{ comment.get_url }}">{{ comment.subject }}</a>
         </td>
         <td title="{{ comment.content }}">
             {{ comment.content }}
@@ -60,45 +61,7 @@
         </td>
       </tr>
     {% endfor %}
-    {% for comment in equipments %}
-      <tr>
-        <td title="{{ comment.subject }}">
-          <a href="{% url 'equipment-detail' comment.subject.pk %}">{{ comment.subject }}</a>
-        </td>
-        <td title="{{ comment.content }}">
-          {{ comment.content }}
-        </td>
-        <td title="{{ comment.created_at }}">
-          {{ comment.created_at }}
-        </td>
-      </tr>
-    {% endfor %}
-    {% for comment in vehicles %}
-      <tr>
-        <td title="{{ comment.subject }}">
-          <a href="{% url 'vehicle-detail' comment.subject.pk %}">{{ comment.subject }}</a>
-        </td>
-        <td title="{{ comment.content }}">
-          {{ comment.content }}
-        </td>
-        <td title="{{ comment.created_at }}">
-          {{ comment.created_at }}
-        </td>
-      </tr>
-    {% endfor %}
-    {% for comment in services %}
-      <tr>
-        <td title="{{ comment.subject }}">
-          <a href="{% url 'service-detail' comment.subject.pk %}">{{ comment.subject }}</a>
-        </td>
-        <td title="{{ comment.content }}">
-          {{ comment.content }}
-        </td>
-        <td title="{{ comment.created_at }}">
-          {{ comment.created_at }}
-        </td>
-      </tr>
-    {% endfor %}
     </tbody>
   </table>
+  {% endif %}
 {% endblock %}

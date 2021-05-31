@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Imie i nazwisko</th>
+      <th>Data urodzenia</th>
+      <th>Data wstąpienia</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for firefighter in object_list %}
+      <tr>
+        <td title="{{ firefighter.pk }}">
+          <a href="{% url 'firefighter-detail' firefighter.pk %}">{{ firefighter.pk }}</a>
+        </td>
+        <td title="{{ firefighter.user.first_name }} {{ firefighter.user.last_name }}">
+          {{ firefighter.user.first_name }} {{ firefighter.user.last_name }}
+        </td>
+        <td title="{{ firefighter.data_urodzenia }}">{{ firefighter.data_urodzenia }}</td>
+        <td title="{{ firefighter.data_wstapienia }}">{{ firefighter.data_wstapienia }}</td>
+        <td><a href="{% url 'activate-user' firefighter.pk %}"> Aktywuj </a></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+{% endblock content %}

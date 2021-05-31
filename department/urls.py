@@ -5,6 +5,9 @@ from .api import make_comment
 
 urlpatterns = [
     path('', views.HomeListView.as_view(), name='home'),
+    path('rejestracja/', views.RegisterUser.as_view(), name='register'),
+    path('uzytkownicy/', views.InactiveUsersListView.as_view(), name='inactive-users'),
+    path('aktywuj-uzytkownika/<int:pk>', views.MakeActiveUser.as_view(), name='activate-user'),
 
     path('sprzet/', views.EquipmentListView.as_view(), name='equipment-list'),
     path('sprzet/nowy/', views.EquipmentCreateView.as_view(), name='equipment-create'),

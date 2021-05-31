@@ -2,7 +2,7 @@ from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, CreateView, DetailView, UpdateView, DeleteView
-
+from django.contrib.auth.mixins import PermissionRequiredMixin
 from department.forms import HistoryEquipmentCreateForm, HistoryEquipmentUpdateForm
 from department.models import PrzegladSprzet
 
@@ -13,11 +13,12 @@ class HistoryEquipmentListView(ListView):
     ordering = ('pk',)
 
 
-class HistoryEquipmentCreateView(CreateView):
+class HistoryEquipmentCreateView(PermissionRequiredMixin,CreateView):
     template_name = 'department/history_equipment_form.html'
     model = PrzegladSprzet
     form_class = HistoryEquipmentCreateForm
     success_url = reverse_lazy('history-equipment-list')
+    permission_required = 'department.can_add_przeglad_sprzet'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -39,10 +40,11 @@ class HistoryEquipmentDetailView(DetailView):
         return context
 
 
-class HistoryEquipmentUpdateView(UpdateView):
+class HistoryEquipmentUpdateView(PermissionRequiredMixin, UpdateView):
     template_name = 'department/history_equipment_form.html'
     model = PrzegladSprzet
     form_class = HistoryEquipmentUpdateForm
+    permission_required = 'department.can_change_przeglad_sprzet'
 
     def get_success_url(self):
         return reverse('history-equipment-detail', args=(self.kwargs['pk'],))
@@ -55,10 +57,11 @@ class HistoryEquipmentUpdateView(UpdateView):
         return context
 
 
-class HistoryEquipmentDeleteView(DeleteView):
+class HistoryEquipmentDeleteView(PermissionRequiredMixin, DeleteView):
     model = PrzegladSprzet
     template_name = 'department/history_equipment_confirm_delete.html'
     success_url = reverse_lazy('history-equipment-list')
+    permission_required = 'department.can_delete_przeglad_sprzet'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

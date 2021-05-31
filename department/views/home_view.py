@@ -11,16 +11,16 @@ class HomeListView(ListView):
     queryset = Pojazdy.objects.all()
 
     def get_context_data(self, **kwargs):
-    	context = super(HomeListView, self).get_context_data(**kwargs)
-    	context['pojazdy'] = Pojazdy.objects.all()
-    	context['uslugi'] = Uslugi.objects.all()
-    	context['sprzet'] = Sprzet.objects.all()
-    	context['strazacy'] = Strazacy.objects.all()
+        context = super(HomeListView, self).get_context_data(**kwargs)
+        context['pojazdy'] = Pojazdy.objects.all()
+        context['uslugi'] = Uslugi.objects.all()
+        context['sprzet'] = Sprzet.objects.all()
+        context['strazacy'] = Strazacy.objects.all()
         context.update({
             "firefighters": UwagaStrazacy.objects.order_by('created_at'),
             "equipments": UwagaSprzet.objects.order_by('created_at'),
             "vehicles": UwagaPojazdy.objects.order_by('created_at'),
             "services": UwagaUslugi.objects.order_by('created_at'),
         })
-    	return context
+        return context
 

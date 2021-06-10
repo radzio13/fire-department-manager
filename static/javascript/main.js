@@ -20,6 +20,10 @@ const getCookie = (name) => {
   return cookieValue;
 };
 
+const detectModal = () => {
+  bodyContainer.style.overflow = location.hash ? 'hidden' : null;
+};
+
 (() => {
   detectModal();
 
@@ -59,10 +63,6 @@ const getCookie = (name) => {
     });
   }
 })();
-
-const detectModal = () => {
-  bodyContainer.style.overflow = location.hash ? 'hidden' : null;
-};
 
 window.addEventListener('hashchange', () => {
   detectModal();
